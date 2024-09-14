@@ -30,7 +30,6 @@ namespace TPWinForm_equipo_2A
         /// </summary>
         private void InitializeComponent()
         {
-            this.lv_Busqueda = new System.Windows.Forms.ListView();
             this.lb_BusquedaMarca = new System.Windows.Forms.ListBox();
             this.lb_BusquedaCategoria = new System.Windows.Forms.ListBox();
             this.lb_RangoPrecio1 = new System.Windows.Forms.ListBox();
@@ -41,16 +40,11 @@ namespace TPWinForm_equipo_2A
             this.lbl_RangoPrecioBusqueda = new System.Windows.Forms.Label();
             this.lbl_NombreBusqueda = new System.Windows.Forms.Label();
             this.lbl_TituloBusqueda = new System.Windows.Forms.Label();
+            this.dgvArticulos = new System.Windows.Forms.DataGridView();
+            this.PbArticulo = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbArticulo)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lv_Busqueda
-            // 
-            this.lv_Busqueda.HideSelection = false;
-            this.lv_Busqueda.Location = new System.Drawing.Point(10, 117);
-            this.lv_Busqueda.Name = "lv_Busqueda";
-            this.lv_Busqueda.Size = new System.Drawing.Size(427, 305);
-            this.lv_Busqueda.TabIndex = 0;
-            this.lv_Busqueda.UseCompatibleStateImageBehavior = false;
             // 
             // lb_BusquedaMarca
             // 
@@ -149,12 +143,30 @@ namespace TPWinForm_equipo_2A
             this.lbl_TituloBusqueda.TabIndex = 12;
             this.lbl_TituloBusqueda.Text = "Busqueda por Filtros";
             // 
+            // dgvArticulos
+            // 
+            this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvArticulos.Location = new System.Drawing.Point(10, 106);
+            this.dgvArticulos.Name = "dgvArticulos";
+            this.dgvArticulos.Size = new System.Drawing.Size(575, 443);
+            this.dgvArticulos.TabIndex = 13;
+            // 
+            // PbArticulo
+            // 
+            this.PbArticulo.Location = new System.Drawing.Point(591, 206);
+            this.PbArticulo.Name = "PbArticulo";
+            this.PbArticulo.Size = new System.Drawing.Size(238, 223);
+            this.PbArticulo.TabIndex = 14;
+            this.PbArticulo.TabStop = false;
+            // 
             // wf_Busqueda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(451, 432);
+            this.ClientSize = new System.Drawing.Size(834, 561);
+            this.Controls.Add(this.PbArticulo);
+            this.Controls.Add(this.dgvArticulos);
             this.Controls.Add(this.lbl_TituloBusqueda);
             this.Controls.Add(this.lbl_NombreBusqueda);
             this.Controls.Add(this.lbl_RangoPrecioBusqueda);
@@ -165,20 +177,20 @@ namespace TPWinForm_equipo_2A
             this.Controls.Add(this.lb_RangoPrecio1);
             this.Controls.Add(this.lb_BusquedaCategoria);
             this.Controls.Add(this.lb_BusquedaMarca);
-            this.Controls.Add(this.lv_Busqueda);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(467, 471);
+            this.MaximumSize = new System.Drawing.Size(850, 600);
             this.Name = "wf_Busqueda";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "wf_Busqueda";
+            this.Load += new System.EventHandler(this.wf_Busqueda_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbArticulo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private ListView lv_Busqueda;
         private ListBox lb_BusquedaMarca;
         private ListBox lb_BusquedaCategoria;
         private ListBox lb_RangoPrecio1;
@@ -189,5 +201,7 @@ namespace TPWinForm_equipo_2A
         private Label lbl_RangoPrecioBusqueda;
         private Label lbl_NombreBusqueda;
         private Label lbl_TituloBusqueda;
+        private DataGridView dgvArticulos;
+        private PictureBox PbArticulo;
     }
 }

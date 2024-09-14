@@ -123,6 +123,9 @@
     <EmbeddedResource Include="wf_AltaMarca.resx">
       <DependentUpon>wf_AltaMarca.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="wf_Busqueda.resx">
+      <DependentUpon>wf_Busqueda.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
