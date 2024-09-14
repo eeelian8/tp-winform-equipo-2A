@@ -90,9 +90,8 @@ namespace Servicios
 
             try
             {
-                datos.setearConsulta("insert into ARTICULOS(Id, Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio) Values(@Id, @Codigo, @Nombre, @Descripcion, @IdMarca, @IdCategoria, @Precio)");
+                datos.setearConsulta("insert into ARTICULOS(Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio) Values(@Codigo, @Nombre, @Descripcion, @IdMarca, @IdCategoria, @Precio)");
                 datos.setearParametro("@Codigo", art.Codigo);
-                datos.setearParametro("@Id", art.Id);
                 datos.setearParametro("@Nombre", art.Nombre);
                 datos.setearParametro("@Descripcion", art.Descripcion);
                 datos.setearParametro("@IdMarca", art.Marca.Id);
