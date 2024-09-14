@@ -41,16 +41,14 @@ namespace TPWinForm_equipo_2A
             this.lbl_NombreBusqueda = new System.Windows.Forms.Label();
             this.lbl_TituloBusqueda = new System.Windows.Forms.Label();
             this.dgvArticulos = new System.Windows.Forms.DataGridView();
-            this.PbArticulo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbArticulo)).BeginInit();
             this.SuspendLayout();
             // 
             // lb_BusquedaMarca
             // 
             this.lb_BusquedaMarca.BackColor = System.Drawing.Color.White;
             this.lb_BusquedaMarca.FormattingEnabled = true;
-            this.lb_BusquedaMarca.Location = new System.Drawing.Point(12, 83);
+            this.lb_BusquedaMarca.Location = new System.Drawing.Point(47, 83);
             this.lb_BusquedaMarca.Name = "lb_BusquedaMarca";
             this.lb_BusquedaMarca.Size = new System.Drawing.Size(91, 17);
             this.lb_BusquedaMarca.TabIndex = 1;
@@ -59,7 +57,7 @@ namespace TPWinForm_equipo_2A
             // 
             this.lb_BusquedaCategoria.BackColor = System.Drawing.Color.White;
             this.lb_BusquedaCategoria.FormattingEnabled = true;
-            this.lb_BusquedaCategoria.Location = new System.Drawing.Point(108, 83);
+            this.lb_BusquedaCategoria.Location = new System.Drawing.Point(228, 84);
             this.lb_BusquedaCategoria.Name = "lb_BusquedaCategoria";
             this.lb_BusquedaCategoria.Size = new System.Drawing.Size(97, 17);
             this.lb_BusquedaCategoria.TabIndex = 2;
@@ -68,7 +66,7 @@ namespace TPWinForm_equipo_2A
             // 
             this.lb_RangoPrecio1.BackColor = System.Drawing.Color.White;
             this.lb_RangoPrecio1.FormattingEnabled = true;
-            this.lb_RangoPrecio1.Location = new System.Drawing.Point(210, 83);
+            this.lb_RangoPrecio1.Location = new System.Drawing.Point(455, 84);
             this.lb_RangoPrecio1.Name = "lb_RangoPrecio1";
             this.lb_RangoPrecio1.Size = new System.Drawing.Size(61, 17);
             this.lb_RangoPrecio1.TabIndex = 3;
@@ -77,7 +75,7 @@ namespace TPWinForm_equipo_2A
             // 
             this.lb_RangoPrecio2.BackColor = System.Drawing.Color.White;
             this.lb_RangoPrecio2.FormattingEnabled = true;
-            this.lb_RangoPrecio2.Location = new System.Drawing.Point(275, 83);
+            this.lb_RangoPrecio2.Location = new System.Drawing.Point(520, 84);
             this.lb_RangoPrecio2.Name = "lb_RangoPrecio2";
             this.lb_RangoPrecio2.Size = new System.Drawing.Size(61, 17);
             this.lb_RangoPrecio2.TabIndex = 4;
@@ -86,7 +84,7 @@ namespace TPWinForm_equipo_2A
             // 
             this.lb_BusquedaNombre.BackColor = System.Drawing.Color.White;
             this.lb_BusquedaNombre.FormattingEnabled = true;
-            this.lb_BusquedaNombre.Location = new System.Drawing.Point(340, 83);
+            this.lb_BusquedaNombre.Location = new System.Drawing.Point(687, 83);
             this.lb_BusquedaNombre.Name = "lb_BusquedaNombre";
             this.lb_BusquedaNombre.Size = new System.Drawing.Size(97, 17);
             this.lb_BusquedaNombre.TabIndex = 6;
@@ -95,7 +93,7 @@ namespace TPWinForm_equipo_2A
             // 
             this.lbl_MarcaBusqueda.AutoSize = true;
             this.lbl_MarcaBusqueda.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lbl_MarcaBusqueda.Location = new System.Drawing.Point(12, 65);
+            this.lbl_MarcaBusqueda.Location = new System.Drawing.Point(64, 65);
             this.lbl_MarcaBusqueda.Name = "lbl_MarcaBusqueda";
             this.lbl_MarcaBusqueda.Size = new System.Drawing.Size(60, 16);
             this.lbl_MarcaBusqueda.TabIndex = 7;
@@ -105,7 +103,7 @@ namespace TPWinForm_equipo_2A
             // 
             this.lbl_CategoriaBusqueda.AutoSize = true;
             this.lbl_CategoriaBusqueda.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lbl_CategoriaBusqueda.Location = new System.Drawing.Point(108, 65);
+            this.lbl_CategoriaBusqueda.Location = new System.Drawing.Point(232, 65);
             this.lbl_CategoriaBusqueda.Name = "lbl_CategoriaBusqueda";
             this.lbl_CategoriaBusqueda.Size = new System.Drawing.Size(85, 16);
             this.lbl_CategoriaBusqueda.TabIndex = 8;
@@ -115,7 +113,7 @@ namespace TPWinForm_equipo_2A
             // 
             this.lbl_RangoPrecioBusqueda.AutoSize = true;
             this.lbl_RangoPrecioBusqueda.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lbl_RangoPrecioBusqueda.Location = new System.Drawing.Point(222, 65);
+            this.lbl_RangoPrecioBusqueda.Location = new System.Drawing.Point(455, 65);
             this.lbl_RangoPrecioBusqueda.Name = "lbl_RangoPrecioBusqueda";
             this.lbl_RangoPrecioBusqueda.Size = new System.Drawing.Size(126, 16);
             this.lbl_RangoPrecioBusqueda.TabIndex = 10;
@@ -125,7 +123,7 @@ namespace TPWinForm_equipo_2A
             // 
             this.lbl_NombreBusqueda.AutoSize = true;
             this.lbl_NombreBusqueda.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lbl_NombreBusqueda.Location = new System.Drawing.Point(340, 65);
+            this.lbl_NombreBusqueda.Location = new System.Drawing.Point(707, 65);
             this.lbl_NombreBusqueda.Name = "lbl_NombreBusqueda";
             this.lbl_NombreBusqueda.Size = new System.Drawing.Size(64, 16);
             this.lbl_NombreBusqueda.TabIndex = 11;
@@ -145,19 +143,12 @@ namespace TPWinForm_equipo_2A
             // 
             // dgvArticulos
             // 
+            this.dgvArticulos.BackgroundColor = System.Drawing.Color.White;
             this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvArticulos.Location = new System.Drawing.Point(10, 106);
             this.dgvArticulos.Name = "dgvArticulos";
-            this.dgvArticulos.Size = new System.Drawing.Size(575, 443);
+            this.dgvArticulos.Size = new System.Drawing.Size(812, 443);
             this.dgvArticulos.TabIndex = 13;
-            // 
-            // PbArticulo
-            // 
-            this.PbArticulo.Location = new System.Drawing.Point(591, 206);
-            this.PbArticulo.Name = "PbArticulo";
-            this.PbArticulo.Size = new System.Drawing.Size(238, 223);
-            this.PbArticulo.TabIndex = 14;
-            this.PbArticulo.TabStop = false;
             // 
             // wf_Busqueda
             // 
@@ -165,7 +156,6 @@ namespace TPWinForm_equipo_2A
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(834, 561);
-            this.Controls.Add(this.PbArticulo);
             this.Controls.Add(this.dgvArticulos);
             this.Controls.Add(this.lbl_TituloBusqueda);
             this.Controls.Add(this.lbl_NombreBusqueda);
@@ -184,7 +174,6 @@ namespace TPWinForm_equipo_2A
             this.Text = "wf_Busqueda";
             this.Load += new System.EventHandler(this.wf_Busqueda_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbArticulo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -202,6 +191,5 @@ namespace TPWinForm_equipo_2A
         private Label lbl_NombreBusqueda;
         private Label lbl_TituloBusqueda;
         private DataGridView dgvArticulos;
-        private PictureBox PbArticulo;
     }
 }

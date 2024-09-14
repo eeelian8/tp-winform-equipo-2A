@@ -16,6 +16,25 @@ namespace TPWinForm_equipo_2A
 {
     public partial class wf_MarcasCategorias : Form
     {
+        private void cargarMarcas()
+        {
+            lv_MarcasMC.Items.Clear();
+            MarcaCBD marCBD = new MarcaCBD();
+            foreach (Marca mar in marCBD.Listar())
+            {
+                lv_MarcasMC.Items.Add(mar.Descripcion);
+            }
+        }
+        private void cargarCategorias()
+        {
+            lv_CategoriasMC.Items.Clear();
+            CategoriaCBD catCBD = new CategoriaCBD();
+            foreach (Categoria cat in catCBD.Listar())
+            {
+                lv_CategoriasMC.Items.Add(cat.Descripcion);
+            }
+        }
+
         public wf_MarcasCategorias()
         {
             InitializeComponent();
@@ -23,35 +42,26 @@ namespace TPWinForm_equipo_2A
 
         private void wf_MarcasCategorias_Load(object sender, EventArgs e)
         {
-
         }
 
         private void wf_MarcasCategorias_Load_1(object sender, EventArgs e)
         {
-            CategoriaCBD catCBD = new CategoriaCBD();
-            foreach (Categoria cat in catCBD.Listar())
-            {
-                lv_CategoriasMC.Items.Add(cat.Descripcion);
-            }
-
-            MarcaCBD marCBD = new MarcaCBD();
-            foreach (Marca mar in marCBD.Listar())
-            {
-                lv_MarcasMC.Items.Add(mar.Descripcion);
-            }
+            cargarMarcas();
+            cargarCategorias();
         }
 
         private void btn_AgregarMarcasMC_Click(object sender, EventArgs e)
         {
             wf_AltaMarca formAltaMarca = new wf_AltaMarca();
             formAltaMarca.ShowDialog();
-            CategoriaCBD catCBD = new CategoriaCBD();
+            cargarMarcas();
         }
 
         private void btn_AgregarCategoriasMC_Click(object sender, EventArgs e)
         {
             wf_AltaCategoria formAltaCategoria = new wf_AltaCategoria();
             formAltaCategoria.ShowDialog();
+            cargarCategorias();
         }
     }
 }

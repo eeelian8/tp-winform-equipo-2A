@@ -23,6 +23,6 @@ public class Articulo
         {
             return Imagenes[0].Url;
         }
-        return null; // O puedes devolver una URL de imagen por defecto
+        return null;
     }
 }
