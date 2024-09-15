@@ -66,5 +66,22 @@ namespace Servicios
             }
 
         }
+
+        public void Eliminar(int c)
+        {
+
+            try
+            {
+                AccesoDatos datos = new AccesoDatos();
+                datos.setearConsulta("delete from CATEGORIAS where Id = @Id");
+                datos.setearParametro("@Id", c);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
     }
 }

@@ -34,7 +34,8 @@ namespace TPWinForm_equipo_2A
             this.lbl_NroArticuloEA = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btn_EliminarEA = new System.Windows.Forms.Button();
-            this.input_NroArticuloEA = new System.Windows.Forms.TextBox();
+            this.input_CodigoArticuloEA = new System.Windows.Forms.TextBox();
+            this.lbl_EstadoEliminacion = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbl_NroArticuloEA
@@ -66,20 +67,30 @@ namespace TPWinForm_equipo_2A
             this.btn_EliminarEA.TabIndex = 2;
             this.btn_EliminarEA.Text = "ELIMINAR";
             this.btn_EliminarEA.UseVisualStyleBackColor = false;
+            this.btn_EliminarEA.Click += new System.EventHandler(this.btn_EliminarEA_Click);
             // 
-            // input_NroArticuloEA
+            // input_CodigoArticuloEA
             // 
-            this.input_NroArticuloEA.Location = new System.Drawing.Point(70, 80);
-            this.input_NroArticuloEA.Name = "input_NroArticuloEA";
-            this.input_NroArticuloEA.Size = new System.Drawing.Size(180, 20);
-            this.input_NroArticuloEA.TabIndex = 3;
+            this.input_CodigoArticuloEA.Location = new System.Drawing.Point(70, 80);
+            this.input_CodigoArticuloEA.Name = "input_CodigoArticuloEA";
+            this.input_CodigoArticuloEA.Size = new System.Drawing.Size(180, 20);
+            this.input_CodigoArticuloEA.TabIndex = 3;
+            // 
+            // lbl_EstadoEliminacion
+            // 
+            this.lbl_EstadoEliminacion.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_EstadoEliminacion.Location = new System.Drawing.Point(53, 139);
+            this.lbl_EstadoEliminacion.Name = "lbl_EstadoEliminacion";
+            this.lbl_EstadoEliminacion.Size = new System.Drawing.Size(246, 30);
+            this.lbl_EstadoEliminacion.TabIndex = 4;
             // 
             // wf_ADM_EliminarArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(321, 270);
-            this.Controls.Add(this.input_NroArticuloEA);
+            this.Controls.Add(this.lbl_EstadoEliminacion);
+            this.Controls.Add(this.input_CodigoArticuloEA);
             this.Controls.Add(this.btn_EliminarEA);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lbl_NroArticuloEA);
@@ -98,6 +109,7 @@ namespace TPWinForm_equipo_2A
         private Label lbl_NroArticuloEA;
         private Label label2;
         private Button btn_EliminarEA;
-        private TextBox input_NroArticuloEA;
+        private TextBox input_CodigoArticuloEA;
+        private Label lbl_EstadoEliminacion;
     }
 }

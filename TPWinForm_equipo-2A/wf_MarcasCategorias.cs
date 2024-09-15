@@ -22,7 +22,7 @@ namespace TPWinForm_equipo_2A
             MarcaCBD marCBD = new MarcaCBD();
             foreach (Marca mar in marCBD.Listar())
             {
-                lv_MarcasMC.Items.Add(mar.Descripcion);
+                lv_MarcasMC.Items.Add("ID: " + mar.Id.ToString() + " - " + mar.Descripcion);
             }
         }
         private void cargarCategorias()
@@ -31,7 +31,7 @@ namespace TPWinForm_equipo_2A
             CategoriaCBD catCBD = new CategoriaCBD();
             foreach (Categoria cat in catCBD.Listar())
             {
-                lv_CategoriasMC.Items.Add(cat.Descripcion);
+                lv_CategoriasMC.Items.Add("ID: " +cat.Id.ToString() + " - " + cat.Descripcion);
             }
         }
 
@@ -61,6 +61,20 @@ namespace TPWinForm_equipo_2A
         {
             wf_AltaCategoria formAltaCategoria = new wf_AltaCategoria();
             formAltaCategoria.ShowDialog();
+            cargarCategorias();
+        }
+
+        private void btn_EliminarMarcasMC_Click(object sender, EventArgs e)
+        {
+            wf_EliminarMarca formEliminarMarca = new wf_EliminarMarca();
+            formEliminarMarca.ShowDialog();
+            cargarMarcas();
+        }
+
+        private void btn_EliminarCategoriasMC_Click(object sender, EventArgs e)
+        {
+            wf_EliminarCategoria formEliminarCategoria = new wf_EliminarCategoria();
+            formEliminarCategoria.ShowDialog();
             cargarCategorias();
         }
     }

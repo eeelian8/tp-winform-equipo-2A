@@ -24,7 +24,7 @@ namespace Servicios
             try
             {
 
-                datos.setearConsulta("SELECT DISTINCT a.* \r\nFROM Articulos a\r\nJOIN IMAGENES i ON a.id = i.Id\r\n-- otros joins y condiciones");
+                datos.setearConsulta("select A.Id, A.Codigo, A.Nombre, A.Descripcion, A.IdMarca, A.IdCategoria, A.Precio, I.id IdImagen from ARTICULOS A left join MARCAS M on A.IdMarca = M.Id left join CATEGORIAS C on A.IdCategoria = C.Id left join IMAGENES I on A.Id = I.IdArticulo");
                 datos.ejecutarLectura();
 
                 int IDCategoria = 0;
@@ -131,6 +131,23 @@ namespace Servicios
             }
         }
 
+        public void Eliminar(string codArticulo)
+        {
+
+            try
+            {
+                AccesoDatos datos = new AccesoDatos();
+                datos.setearConsulta("delete from ARTICULOS where Codigo = @Codigo");
+                datos.setearParametro("@Codigo", codArticulo);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
         public Articulo Buscar(string CodArticulo)
         {
             ArticuloCBD articuloCBD = new ArticuloCBD();
@@ -153,7 +170,5 @@ namespace Servicios
                 throw;
             }
         }
-
-        
     }
 }

@@ -67,5 +67,23 @@ namespace Servicios
             }
 
         }
+
+        public void Eliminar(int m)
+        {
+
+            try
+            {
+                AccesoDatos datos = new AccesoDatos();
+                datos.setearConsulta("delete from MARCAS where Id = @Id");
+                datos.setearParametro("@Id", m);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
     }
 }

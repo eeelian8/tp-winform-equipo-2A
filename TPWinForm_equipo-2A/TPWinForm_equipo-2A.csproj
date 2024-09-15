@@ -90,6 +90,18 @@
     <Compile Include="wf_Detalles.Designer.cs">
       <DependentUpon>wf_Detalles.cs</DependentUpon>
     </Compile>
+    <Compile Include="wf_EliminarCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="wf_EliminarCategoria.Designer.cs">
+      <DependentUpon>wf_EliminarCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="wf_EliminarMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="wf_EliminarMarca.Designer.cs">
+      <DependentUpon>wf_EliminarMarca.cs</DependentUpon>
+    </Compile>
     <Compile Include="wf_Inicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +129,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="wf_ADM_EliminarArticulo.resx">
+      <DependentUpon>wf_ADM_EliminarArticulo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="wf_AltaCategoria.resx">
       <DependentUpon>wf_AltaCategoria.cs</DependentUpon>
     </EmbeddedResource>
@@ -125,6 +140,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="wf_Busqueda.resx">
       <DependentUpon>wf_Busqueda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wf_EliminarCategoria.resx">
+      <DependentUpon>wf_EliminarCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wf_EliminarMarca.resx">
+      <DependentUpon>wf_EliminarMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wf_MarcasCategorias.resx">
+      <DependentUpon>wf_MarcasCategorias.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

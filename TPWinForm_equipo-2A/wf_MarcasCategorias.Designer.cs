@@ -65,6 +65,7 @@ namespace TPWinForm_equipo_2A
             this.btn_EliminarMarcasMC.TabIndex = 1;
             this.btn_EliminarMarcasMC.Text = "Eliminar";
             this.btn_EliminarMarcasMC.UseVisualStyleBackColor = false;
+            this.btn_EliminarMarcasMC.Click += new System.EventHandler(this.btn_EliminarMarcasMC_Click);
             // 
             // gb_MarcasMC
             // 
@@ -81,14 +82,18 @@ namespace TPWinForm_equipo_2A
             // 
             // lv_MarcasMC
             // 
-            this.lv_MarcasMC.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lv_MarcasMC.Alignment = System.Windows.Forms.ListViewAlignment.Default;
+            this.lv_MarcasMC.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lv_MarcasMC.HideSelection = false;
             this.lv_MarcasMC.Location = new System.Drawing.Point(11, 73);
+            this.lv_MarcasMC.MultiSelect = false;
             this.lv_MarcasMC.Name = "lv_MarcasMC";
+            this.lv_MarcasMC.ShowGroups = false;
             this.lv_MarcasMC.Size = new System.Drawing.Size(183, 277);
             this.lv_MarcasMC.TabIndex = 6;
+            this.lv_MarcasMC.TileSize = new System.Drawing.Size(220, 20);
             this.lv_MarcasMC.UseCompatibleStateImageBehavior = false;
-            this.lv_MarcasMC.View = System.Windows.Forms.View.List;
+            this.lv_MarcasMC.View = System.Windows.Forms.View.Tile;
             // 
             // gb_CategoriasMC
             // 
@@ -105,14 +110,17 @@ namespace TPWinForm_equipo_2A
             // 
             // lv_CategoriasMC
             // 
-            this.lv_CategoriasMC.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lv_CategoriasMC.Alignment = System.Windows.Forms.ListViewAlignment.Default;
+            this.lv_CategoriasMC.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lv_CategoriasMC.HideSelection = false;
             this.lv_CategoriasMC.Location = new System.Drawing.Point(11, 70);
+            this.lv_CategoriasMC.MultiSelect = false;
             this.lv_CategoriasMC.Name = "lv_CategoriasMC";
             this.lv_CategoriasMC.Size = new System.Drawing.Size(183, 277);
             this.lv_CategoriasMC.TabIndex = 7;
+            this.lv_CategoriasMC.TileSize = new System.Drawing.Size(200, 20);
             this.lv_CategoriasMC.UseCompatibleStateImageBehavior = false;
-            this.lv_CategoriasMC.View = System.Windows.Forms.View.List;
+            this.lv_CategoriasMC.View = System.Windows.Forms.View.Tile;
             // 
             // btn_EliminarCategoriasMC
             // 
@@ -124,6 +132,7 @@ namespace TPWinForm_equipo_2A
             this.btn_EliminarCategoriasMC.TabIndex = 1;
             this.btn_EliminarCategoriasMC.Text = "Eliminar";
             this.btn_EliminarCategoriasMC.UseVisualStyleBackColor = false;
+            this.btn_EliminarCategoriasMC.Click += new System.EventHandler(this.btn_EliminarCategoriasMC_Click);
             // 
             // btn_AgregarCategoriasMC
             // 
