@@ -53,6 +53,9 @@ namespace TPWinForm_equipo_2A
             db_BusquedaCategoria.DataSource = categoriaService.Listar();
             db_BusquedaCategoria.DisplayMember = "Descripcion";
             db_BusquedaCategoria.SelectedIndex = -1;
+
+            TbPrecioMIN.Text = "";
+            TbPrecioMAX.Text = "";
         }
 
         private void formatoDgv()
@@ -102,16 +105,22 @@ namespace TPWinForm_equipo_2A
             List<Articulo> listaFiltrada;
             string filtroNombre = TbNombre.Text;
             string filtroCategoria = db_BusquedaCategoria.Text;
+            string filtroMarca = db_BusquedaMarca.Text;
+            string filtroPrecioMin = TbPrecioMIN.Text;
+            string filtroPrecioMax = TbPrecioMAX.Text;
 
-            if (filtroCategoria != "")
-            {
-                //listaFiltrada = listaArticulo.FindAll(art => art.Nombre.ToUpper().Contains(filtroNombre.ToUpper()) );
-                listaFiltrada = listaArticulo.FindAll(art => art.Categoria.Descripcion.ToString() == filtroCategoria);
-            }
-            else 
-            {
-                listaFiltrada = listaArticulo;
-            }
+            // Convertir los precios mínimos y máximos a números si no están vacíos
+            decimal? precioMin = !string.IsNullOrEmpty(filtroPrecioMin) ? decimal.Parse(filtroPrecioMin) : (decimal?)null;
+            decimal? precioMax = !string.IsNullOrEmpty(filtroPrecioMax) ? decimal.Parse(filtroPrecioMax) : (decimal?)null;
+
+            listaFiltrada = listaArticulo.FindAll(art =>
+                (string.IsNullOrEmpty(filtroNombre) || art.Nombre.ToUpper().Contains(filtroNombre.ToUpper())) &&
+                (string.IsNullOrEmpty(filtroCategoria) || art.Categoria.Descripcion.ToString() == filtroCategoria) &&
+                (string.IsNullOrEmpty(filtroMarca) || art.Marca.Descripcion.ToString() == filtroMarca) &&
+                (!precioMin.HasValue || art.Precio >= precioMin.Value) &&
+                (!precioMax.HasValue || art.Precio <= precioMax.Value)
+            );
+
             dgvArticulos.DataSource = null;
             dgvArticulos.DataSource = listaFiltrada;
             formatoDgv();
