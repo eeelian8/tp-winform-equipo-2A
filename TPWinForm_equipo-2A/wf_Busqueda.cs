@@ -30,22 +30,19 @@ namespace TPWinForm_equipo_2A
         private void wf_Busqueda_Load(object sender, EventArgs e)
         {
             cargar();
+            formatoDgv();
+            limpiarFiltros();
 
-            //Establecemos el ancho de cada columna
-            dgvArticulos.RowHeadersVisible = false;
-            dgvArticulos.ColumnHeadersVisible = false;
+        }
 
-            dgvArticulos.Columns[0].Width = 25;
-            dgvArticulos.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            dgvArticulos.Columns[2].Width = 55;
-            dgvArticulos.Columns[3].Width = 150;
-            dgvArticulos.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            dgvArticulos.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            dgvArticulos.Columns[6].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            //Establecemos el formato de precio:
-            dgvArticulos.Columns[6].DefaultCellStyle.Format = "C0";
-
-
+        private void cargar()
+        {
+            ArticuloCBD servicio = new ArticuloCBD();
+            listaArticulo = servicio.Listar();
+            dgvArticulos.DataSource = listaArticulo;
+        }
+        private void limpiarFiltros()
+        {
             MarcaCBD marcaService = new MarcaCBD();
             db_BusquedaMarca.DataSource = marcaService.Listar();
             db_BusquedaMarca.DisplayMember = "Descripcion";
@@ -56,15 +53,23 @@ namespace TPWinForm_equipo_2A
             db_BusquedaCategoria.DataSource = categoriaService.Listar();
             db_BusquedaCategoria.DisplayMember = "Descripcion";
             db_BusquedaCategoria.SelectedIndex = -1;
-
-
         }
 
-        private void cargar ()
+        private void formatoDgv()
         {
-            ArticuloCBD servicio = new ArticuloCBD();
-            listaArticulo = servicio.Listar();
-            dgvArticulos.DataSource = listaArticulo;
+            //Establecemos el ancho de cada columna
+            dgvArticulos.RowHeadersVisible = false;
+            dgvArticulos.ColumnHeadersVisible = false;
+
+            dgvArticulos.Columns[0].Width = 25;
+            dgvArticulos.Columns[1].Width = 150;
+            dgvArticulos.Columns[2].Width = 45;
+            dgvArticulos.Columns[3].Width = 325;
+            dgvArticulos.Columns[4].Width = 100;
+            dgvArticulos.Columns[5].Width = 100;
+            dgvArticulos.Columns[6].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            //Establecemos el formato de precio:
+            dgvArticulos.Columns[6].DefaultCellStyle.Format = "C0";
         }
 
         private void dgvArticulos_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -95,11 +100,22 @@ namespace TPWinForm_equipo_2A
         private void button1_Click(object sender, EventArgs e)
         {
             List<Articulo> listaFiltrada;
+            string filtroNombre = TbNombre.Text;
+            string filtroCategoria = db_BusquedaCategoria.Text;
 
-            listaFiltrada = listaArticulo.FindAll(art => art.Categoria.Descripcion.ToString() == db_BusquedaCategoria.Text);
-
+            if (filtroCategoria != "")
+            {
+                //listaFiltrada = listaArticulo.FindAll(art => art.Nombre.ToUpper().Contains(filtroNombre.ToUpper()) );
+                listaFiltrada = listaArticulo.FindAll(art => art.Categoria.Descripcion.ToString() == filtroCategoria);
+            }
+            else 
+            {
+                listaFiltrada = listaArticulo;
+            }
             dgvArticulos.DataSource = null;
             dgvArticulos.DataSource = listaFiltrada;
+            formatoDgv();
+
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -120,6 +136,23 @@ namespace TPWinForm_equipo_2A
         private void db_BusquedaCategoria_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void TbNombre_TextChanged(object sender, EventArgs e)
+        {
+            List<Articulo> listaFiltrada;
+            string filtroNombre = TbNombre.Text;
+            listaFiltrada = listaArticulo.FindAll(art => art.Nombre.ToUpper().Contains(filtroNombre.ToUpper()));
+
+            dgvArticulos.DataSource = null;
+            dgvArticulos.DataSource = listaFiltrada;
+            formatoDgv();
+        }
+
+        private void btnLimpiarFiltros_Click(object sender, EventArgs e)
+        {
+            limpiarFiltros();
+            cargar();
         }
     }
 }

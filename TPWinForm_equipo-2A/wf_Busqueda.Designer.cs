@@ -50,6 +50,9 @@ namespace TPWinForm_equipo_2A
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.TbNombre = new System.Windows.Forms.TextBox();
+            this.btnLimpiarFiltros = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,7 +60,7 @@ namespace TPWinForm_equipo_2A
             // 
             this.lbl_NombreBusca.AutoSize = true;
             this.lbl_NombreBusca.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lbl_NombreBusca.Location = new System.Drawing.Point(59, 134);
+            this.lbl_NombreBusca.Location = new System.Drawing.Point(80, 133);
             this.lbl_NombreBusca.Name = "lbl_NombreBusca";
             this.lbl_NombreBusca.Size = new System.Drawing.Size(59, 16);
             this.lbl_NombreBusca.TabIndex = 7;
@@ -68,21 +71,21 @@ namespace TPWinForm_equipo_2A
             // 
             this.lbl_CodigoBusca.AutoSize = true;
             this.lbl_CodigoBusca.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lbl_CodigoBusca.Location = new System.Drawing.Point(150, 133);
+            this.lbl_CodigoBusca.Location = new System.Drawing.Point(183, 133);
             this.lbl_CodigoBusca.Name = "lbl_CodigoBusca";
             this.lbl_CodigoBusca.Size = new System.Drawing.Size(55, 16);
             this.lbl_CodigoBusca.TabIndex = 8;
-            this.lbl_CodigoBusca.Text = "CODIGO";
+            this.lbl_CodigoBusca.Text = "CÓDIGO";
             // 
             // lbl_DescripcionBusca
             // 
             this.lbl_DescripcionBusca.AutoSize = true;
             this.lbl_DescripcionBusca.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lbl_DescripcionBusca.Location = new System.Drawing.Point(235, 133);
+            this.lbl_DescripcionBusca.Location = new System.Drawing.Point(342, 135);
             this.lbl_DescripcionBusca.Name = "lbl_DescripcionBusca";
             this.lbl_DescripcionBusca.Size = new System.Drawing.Size(91, 16);
             this.lbl_DescripcionBusca.TabIndex = 11;
-            this.lbl_DescripcionBusca.Text = "DESCRIPCION";
+            this.lbl_DescripcionBusca.Text = "DESCRIPCIÓN";
             // 
             // lbl_TituloBusqueda
             // 
@@ -99,8 +102,11 @@ namespace TPWinForm_equipo_2A
             // dgvArticulos
             // 
             this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvArticulos.Location = new System.Drawing.Point(10, 154);
+            this.dgvArticulos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dgvArticulos.Location = new System.Drawing.Point(11, 154);
+            this.dgvArticulos.MultiSelect = false;
             this.dgvArticulos.Name = "dgvArticulos";
+            this.dgvArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvArticulos.Size = new System.Drawing.Size(812, 396);
             this.dgvArticulos.TabIndex = 13;
             this.dgvArticulos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvArticulos_CellContentClick_1);
@@ -119,7 +125,7 @@ namespace TPWinForm_equipo_2A
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(362, 133);
+            this.label1.Location = new System.Drawing.Point(580, 133);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 16);
             this.label1.TabIndex = 16;
@@ -127,8 +133,9 @@ namespace TPWinForm_equipo_2A
             // 
             // db_BusquedaMarca
             // 
+            this.db_BusquedaMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.db_BusquedaMarca.FormattingEnabled = true;
-            this.db_BusquedaMarca.Location = new System.Drawing.Point(474, 48);
+            this.db_BusquedaMarca.Location = new System.Drawing.Point(518, 48);
             this.db_BusquedaMarca.Name = "db_BusquedaMarca";
             this.db_BusquedaMarca.Size = new System.Drawing.Size(89, 21);
             this.db_BusquedaMarca.TabIndex = 20;
@@ -147,8 +154,9 @@ namespace TPWinForm_equipo_2A
             // 
             // db_BusquedaCategoria
             // 
+            this.db_BusquedaCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.db_BusquedaCategoria.FormattingEnabled = true;
-            this.db_BusquedaCategoria.Location = new System.Drawing.Point(379, 49);
+            this.db_BusquedaCategoria.Location = new System.Drawing.Point(423, 49);
             this.db_BusquedaCategoria.Name = "db_BusquedaCategoria";
             this.db_BusquedaCategoria.Size = new System.Drawing.Size(89, 21);
             this.db_BusquedaCategoria.TabIndex = 22;
@@ -158,7 +166,7 @@ namespace TPWinForm_equipo_2A
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(458, 133);
+            this.label2.Location = new System.Drawing.Point(667, 133);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(80, 16);
             this.label2.TabIndex = 21;
@@ -181,9 +189,9 @@ namespace TPWinForm_equipo_2A
             // btnAplicarFiltros
             // 
             this.btnAplicarFiltros.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F);
-            this.btnAplicarFiltros.Location = new System.Drawing.Point(744, 103);
+            this.btnAplicarFiltros.Location = new System.Drawing.Point(632, 91);
             this.btnAplicarFiltros.Name = "btnAplicarFiltros";
-            this.btnAplicarFiltros.Size = new System.Drawing.Size(69, 19);
+            this.btnAplicarFiltros.Size = new System.Drawing.Size(82, 25);
             this.btnAplicarFiltros.TabIndex = 26;
             this.btnAplicarFiltros.Text = "APLICAR";
             this.btnAplicarFiltros.UseVisualStyleBackColor = true;
@@ -217,7 +225,7 @@ namespace TPWinForm_equipo_2A
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label5.Location = new System.Drawing.Point(362, 9);
+            this.label5.Location = new System.Drawing.Point(312, 9);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(80, 18);
             this.label5.TabIndex = 29;
@@ -229,7 +237,7 @@ namespace TPWinForm_equipo_2A
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label6.Location = new System.Drawing.Point(386, 31);
+            this.label6.Location = new System.Drawing.Point(430, 31);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(77, 16);
             this.label6.TabIndex = 30;
@@ -240,7 +248,7 @@ namespace TPWinForm_equipo_2A
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label7.Location = new System.Drawing.Point(490, 31);
+            this.label7.Location = new System.Drawing.Point(534, 31);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(54, 16);
             this.label7.TabIndex = 31;
@@ -257,12 +265,45 @@ namespace TPWinForm_equipo_2A
             this.label8.TabIndex = 32;
             this.label8.Text = "PRECIO";
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label9.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label9.Location = new System.Drawing.Point(336, 31);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(56, 16);
+            this.label9.TabIndex = 33;
+            this.label9.Text = "Nombre";
+            // 
+            // TbNombre
+            // 
+            this.TbNombre.Location = new System.Drawing.Point(315, 50);
+            this.TbNombre.Name = "TbNombre";
+            this.TbNombre.Size = new System.Drawing.Size(102, 20);
+            this.TbNombre.TabIndex = 34;
+            this.TbNombre.TextChanged += new System.EventHandler(this.TbNombre_TextChanged);
+            // 
+            // btnLimpiarFiltros
+            // 
+            this.btnLimpiarFiltros.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F);
+            this.btnLimpiarFiltros.Location = new System.Drawing.Point(718, 97);
+            this.btnLimpiarFiltros.Name = "btnLimpiarFiltros";
+            this.btnLimpiarFiltros.Size = new System.Drawing.Size(104, 19);
+            this.btnLimpiarFiltros.TabIndex = 35;
+            this.btnLimpiarFiltros.Text = "LIMPIAR FILTROS";
+            this.btnLimpiarFiltros.UseVisualStyleBackColor = true;
+            this.btnLimpiarFiltros.Click += new System.EventHandler(this.btnLimpiarFiltros_Click);
+            // 
             // wf_Busqueda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(834, 561);
+            this.Controls.Add(this.btnLimpiarFiltros);
+            this.Controls.Add(this.TbNombre);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -316,5 +357,8 @@ namespace TPWinForm_equipo_2A
         private Label label6;
         private Label label7;
         private Label label8;
+        private Label label9;
+        private TextBox TbNombre;
+        private Button btnLimpiarFiltros;
     }
 }
