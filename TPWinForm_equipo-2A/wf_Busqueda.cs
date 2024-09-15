@@ -67,7 +67,7 @@ namespace TPWinForm_equipo_2A
             dgvArticulos.Columns[0].Width = 25;
             dgvArticulos.Columns[1].Width = 150;
             dgvArticulos.Columns[2].Width = 45;
-            dgvArticulos.Columns[3].Width = 325;
+            dgvArticulos.Columns[3].Width = 370;
             dgvArticulos.Columns[4].Width = 100;
             dgvArticulos.Columns[5].Width = 100;
             dgvArticulos.Columns[6].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
@@ -109,7 +109,7 @@ namespace TPWinForm_equipo_2A
             string filtroPrecioMin = TbPrecioMIN.Text;
             string filtroPrecioMax = TbPrecioMAX.Text;
 
-            // Convertir los precios mínimos y máximos a números si no están vacíos
+            // Convierto los precios mínimos y máximos a números si no están vacíos
             decimal? precioMin = !string.IsNullOrEmpty(filtroPrecioMin) ? decimal.Parse(filtroPrecioMin) : (decimal?)null;
             decimal? precioMax = !string.IsNullOrEmpty(filtroPrecioMax) ? decimal.Parse(filtroPrecioMax) : (decimal?)null;
 
