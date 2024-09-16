@@ -29,6 +29,7 @@ namespace TPWinForm_equipo_2A
         {
             string codArt = input_CodigoArticuloMA.Text;
             ArticuloCBD artCBD = new ArticuloCBD();
+            ImagenCBD imagenCBD = new ImagenCBD();
 
             List<Articulo> ListaArticulos = new List<Articulo>();
             ListaArticulos = artCBD.Listar();
@@ -41,6 +42,23 @@ namespace TPWinForm_equipo_2A
                     cb_MarcasDetallesMA.Text = art.Marca.Descripcion;
                     cb_CategoriaDetallesMA.Text = art.Categoria.Descripcion;
                     lbl_PrecioDetallesMA.Text = art.Precio.ToString();
+
+                    foreach (Imagen img in imagenCBD.Listar())
+                    {
+                        if(img.IdArticulo == art.Id)
+                        {
+                            try
+                            {
+                                pb_ImagenesDetallesMA.Load(img.Url);
+                            }
+                            catch (Exception)
+                            {
+                                pb_ImagenesDetallesMA.Load("https://cdn.pixabay.com/photo/2017/11/10/05/24/upload-2935442_1280.png");
+                            }
+                            break;
+                        }
+                    }
+
                 }
             }
         }
@@ -77,6 +95,65 @@ namespace TPWinForm_equipo_2A
             artCBD.Modificar(reg);
             MessageBox.Show("Registro modificado correctamente");
             Close();
+        }
+
+        private void btn_EliminarIMG_Click(object sender, EventArgs e)
+        {
+            ImagenCBD imagenCBD = new ImagenCBD();
+            Imagen imagen = new Imagen();
+
+            Articulo articulo = new Articulo();
+            ArticuloCBD articuloCBD = new ArticuloCBD();
+
+            foreach (Imagen img in imagenCBD.Listar())
+            {
+                foreach (Articulo art in articuloCBD.Listar())
+                {
+                    if(art.Codigo == input_CodigoArticuloMA.Text)
+                    {
+                        imagenCBD.Eliminar(art.Id);
+                        break;
+                    }
+                }
+
+                break;
+            }
+
+            pb_ImagenesDetallesMA.Load("https://cdn.pixabay.com/photo/2017/11/10/05/24/upload-2935442_1280.png");
+        }
+
+        private void btn_AgregarIMG_Click(object sender, EventArgs e)
+        {
+            Articulo Articulo = new Articulo(); 
+            ArticuloCBD articuloCBD = new ArticuloCBD();
+
+            ImagenCBD imagenCBD = new ImagenCBD();
+            Imagen imagen = new Imagen();
+
+            foreach (Articulo art in articuloCBD.Listar())
+            {
+                if (art.Codigo == input_CodigoArticuloMA.Text)
+                {
+                    imagen.IdArticulo = art.Id;
+                    imagen.Url = tb_nuevaUrlImagen.Text;
+                    imagenCBD.Agregar(imagen);
+                    break;
+                }
+            }
+
+        }
+
+        private void tb_nuevaUrlImagen_Leave(object sender, EventArgs e)
+        {
+            try
+            {
+                pb_ImagenesDetallesMA.Load(tb_nuevaUrlImagen.Text);
+            }
+            catch (Exception)
+            {
+
+                pb_ImagenesDetallesMA.Load("https://cdn.pixabay.com/photo/2017/11/10/05/24/upload-2935442_1280.png");
+            }
         }
     }
 }

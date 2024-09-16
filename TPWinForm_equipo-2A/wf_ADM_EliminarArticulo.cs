@@ -36,6 +36,7 @@ namespace TPWinForm_equipo_2A
 
                 foreach (Articulo articulo in ListaArticulos)
                 {
+
                     if (articulo.Codigo == codArticuloInput)
                     {
                         artCBD.Eliminar(articulo.Codigo);
@@ -50,6 +51,12 @@ namespace TPWinForm_equipo_2A
                         break;
                     }
 
+                }
+
+                if (ListaArticulos.Count == 0)
+                {
+                    lbl_EstadoEliminacion.ForeColor = Color.Red;
+                    lbl_EstadoEliminacion.Text = "El codigo ingresado es inexistente";
                 }
             }
             catch (Exception)

@@ -48,6 +48,12 @@ namespace TPWinForm_equipo_2A
                     }
 
                 }
+
+                if (ListaCategorias.Count == 0)
+                {
+                    lbl_estadoEliminacionCategoria.ForeColor = Color.Red;
+                    lbl_estadoEliminacionCategoria.Text = "El ID ingresado es inexistente";
+                }
             }
             catch (Exception )
             {

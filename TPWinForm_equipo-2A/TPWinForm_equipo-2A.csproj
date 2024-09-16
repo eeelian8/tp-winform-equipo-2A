@@ -114,12 +114,6 @@
     <Compile Include="wf_MarcasCategorias.Designer.cs">
       <DependentUpon>wf_MarcasCategorias.cs</DependentUpon>
     </Compile>
-    <Compile Include="wf_Pruebas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="wf_Pruebas.Designer.cs">
-      <DependentUpon>wf_Pruebas.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -129,8 +123,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="wf_ADM_AgregarArticulo.resx">
+      <DependentUpon>wf_ADM_AgregarArticulo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="wf_ADM_EliminarArticulo.resx">
       <DependentUpon>wf_ADM_EliminarArticulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wf_ADM_ModificarArticulo.resx">
+      <DependentUpon>wf_ADM_ModificarArticulo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="wf_AltaCategoria.resx">
       <DependentUpon>wf_AltaCategoria.cs</DependentUpon>

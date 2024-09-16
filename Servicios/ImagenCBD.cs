@@ -44,5 +44,61 @@ namespace Servicios
                 datos.cerrarConexion();
             }
         }
+
+        public void Eliminar(int idArticulo)
+        {
+
+            try
+            {
+                AccesoDatos datos = new AccesoDatos();
+                datos.setearConsulta("delete from IMAGENES where IdArticulo = @IdArticulo");
+                datos.setearParametro("@IdArticulo", idArticulo);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+        public void Agregar(Imagen img)
+        {
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                datos.setearConsulta("insert into IMAGENES (IdArticulo, ImagenUrl) Values(@IdArticulo, @ImagenUrl)");
+                datos.setearParametro("@IdArticulo", img.IdArticulo);
+                datos.setearParametro("@ImagenUrl", img.Url);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+        public void Modificar(Imagen art)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("update IMAGENES set IdArticulo = @IdArticulo where ImagenUrl = @ImagenUrl");
+                datos.setearParametro("@IdArticulo", art.IdArticulo);
+                datos.setearParametro("@ImagenUrl", art.Url);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
     }
 }

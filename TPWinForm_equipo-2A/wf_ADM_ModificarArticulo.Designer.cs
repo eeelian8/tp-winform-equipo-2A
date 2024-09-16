@@ -49,6 +49,7 @@ namespace TPWinForm_equipo_2A
             this.cb_CategoriaDetallesMA = new System.Windows.Forms.ComboBox();
             this.cb_MarcasDetallesMA = new System.Windows.Forms.ComboBox();
             this.lbl_PrecioDetallesMA = new System.Windows.Forms.TextBox();
+            this.tb_nuevaUrlImagen = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pb_ImagenesDetallesMA)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,9 +77,10 @@ namespace TPWinForm_equipo_2A
             // pb_ImagenesDetallesMA
             // 
             this.pb_ImagenesDetallesMA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pb_ImagenesDetallesMA.Location = new System.Drawing.Point(327, 153);
+            this.pb_ImagenesDetallesMA.Location = new System.Drawing.Point(301, 153);
             this.pb_ImagenesDetallesMA.Name = "pb_ImagenesDetallesMA";
-            this.pb_ImagenesDetallesMA.Size = new System.Drawing.Size(198, 195);
+            this.pb_ImagenesDetallesMA.Size = new System.Drawing.Size(241, 177);
+            this.pb_ImagenesDetallesMA.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_ImagenesDetallesMA.TabIndex = 34;
             this.pb_ImagenesDetallesMA.TabStop = false;
             // 
@@ -171,23 +173,25 @@ namespace TPWinForm_equipo_2A
             // 
             this.btn_EliminarIMG.BackColor = System.Drawing.Color.LightSalmon;
             this.btn_EliminarIMG.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_EliminarIMG.Location = new System.Drawing.Point(352, 354);
+            this.btn_EliminarIMG.Location = new System.Drawing.Point(351, 382);
             this.btn_EliminarIMG.Name = "btn_EliminarIMG";
             this.btn_EliminarIMG.Size = new System.Drawing.Size(50, 23);
             this.btn_EliminarIMG.TabIndex = 55;
             this.btn_EliminarIMG.Text = "Eliminar";
             this.btn_EliminarIMG.UseVisualStyleBackColor = false;
+            this.btn_EliminarIMG.Click += new System.EventHandler(this.btn_EliminarIMG_Click);
             // 
             // btn_AgregarIMG
             // 
             this.btn_AgregarIMG.BackColor = System.Drawing.Color.PaleGreen;
             this.btn_AgregarIMG.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_AgregarIMG.Location = new System.Drawing.Point(454, 354);
+            this.btn_AgregarIMG.Location = new System.Drawing.Point(422, 382);
             this.btn_AgregarIMG.Name = "btn_AgregarIMG";
-            this.btn_AgregarIMG.Size = new System.Drawing.Size(50, 23);
+            this.btn_AgregarIMG.Size = new System.Drawing.Size(120, 23);
             this.btn_AgregarIMG.TabIndex = 56;
-            this.btn_AgregarIMG.Text = "Agregar";
+            this.btn_AgregarIMG.Text = "Agregar nueva imagen";
             this.btn_AgregarIMG.UseVisualStyleBackColor = false;
+            this.btn_AgregarIMG.Click += new System.EventHandler(this.btn_AgregarIMG_Click);
             // 
             // lbl_NombreDetallesMA
             // 
@@ -226,11 +230,20 @@ namespace TPWinForm_equipo_2A
             this.lbl_PrecioDetallesMA.Size = new System.Drawing.Size(178, 20);
             this.lbl_PrecioDetallesMA.TabIndex = 63;
             // 
+            // tb_nuevaUrlImagen
+            // 
+            this.tb_nuevaUrlImagen.Location = new System.Drawing.Point(301, 347);
+            this.tb_nuevaUrlImagen.Name = "tb_nuevaUrlImagen";
+            this.tb_nuevaUrlImagen.Size = new System.Drawing.Size(241, 20);
+            this.tb_nuevaUrlImagen.TabIndex = 64;
+            this.tb_nuevaUrlImagen.Leave += new System.EventHandler(this.tb_nuevaUrlImagen_Leave);
+            // 
             // wf_ADM_ModificarArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(554, 431);
+            this.ClientSize = new System.Drawing.Size(565, 431);
+            this.Controls.Add(this.tb_nuevaUrlImagen);
             this.Controls.Add(this.lbl_PrecioDetallesMA);
             this.Controls.Add(this.cb_MarcasDetallesMA);
             this.Controls.Add(this.cb_CategoriaDetallesMA);
@@ -250,7 +263,7 @@ namespace TPWinForm_equipo_2A
             this.Controls.Add(this.input_CodigoArticuloMA);
             this.Controls.Add(this.lbl_NroArticuloMA);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(642, 484);
+            this.MaximumSize = new System.Drawing.Size(581, 470);
             this.Name = "wf_ADM_ModificarArticulo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "wf_ModificarArticulo";
@@ -281,5 +294,6 @@ namespace TPWinForm_equipo_2A
         private ComboBox cb_CategoriaDetallesMA;
         private ComboBox cb_MarcasDetallesMA;
         private TextBox lbl_PrecioDetallesMA;
+        private TextBox tb_nuevaUrlImagen;
     }
 }

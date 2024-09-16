@@ -45,16 +45,22 @@ namespace TPWinForm_equipo_2A
             this.lbl_ImagenNA = new System.Windows.Forms.Label();
             this.input_CodigoNA = new System.Windows.Forms.TextBox();
             this.lbl_CodigoNA = new System.Windows.Forms.Label();
-            this.btn_BuscarNA = new System.Windows.Forms.Button();
             this.cb_MarcaNA = new System.Windows.Forms.ComboBox();
             this.cb_CategoriaNA = new System.Windows.Forms.ComboBox();
+            this.btn_BuscarImagenesLocal = new System.Windows.Forms.Button();
+            this.input_UrlImagen = new System.Windows.Forms.TextBox();
+            this.btn_ConfirmarImagen = new System.Windows.Forms.Button();
+            this.lbl_confirmacionImagen = new System.Windows.Forms.Label();
+            this.btn_descartarImagen = new System.Windows.Forms.Button();
+            this.pb_VisorImagen = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_VisorImagen)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_NombreNA
             // 
             this.lbl_NombreNA.AutoSize = true;
             this.lbl_NombreNA.Font = new System.Drawing.Font("Tahoma", 9.75F);
-            this.lbl_NombreNA.Location = new System.Drawing.Point(48, 99);
+            this.lbl_NombreNA.Location = new System.Drawing.Point(51, 98);
             this.lbl_NombreNA.Name = "lbl_NombreNA";
             this.lbl_NombreNA.Size = new System.Drawing.Size(57, 16);
             this.lbl_NombreNA.TabIndex = 0;
@@ -64,7 +70,7 @@ namespace TPWinForm_equipo_2A
             // 
             this.btnAgregarNA.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnAgregarNA.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarNA.Location = new System.Drawing.Point(359, 341);
+            this.btnAgregarNA.Location = new System.Drawing.Point(366, 536);
             this.btnAgregarNA.Name = "btnAgregarNA";
             this.btnAgregarNA.Size = new System.Drawing.Size(105, 40);
             this.btnAgregarNA.TabIndex = 2;
@@ -76,9 +82,10 @@ namespace TPWinForm_equipo_2A
             // 
             this.input_NombreNA.BackColor = System.Drawing.Color.White;
             this.input_NombreNA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.input_NombreNA.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.input_NombreNA.Location = new System.Drawing.Point(108, 97);
             this.input_NombreNA.Name = "input_NombreNA";
-            this.input_NombreNA.Size = new System.Drawing.Size(363, 20);
+            this.input_NombreNA.Size = new System.Drawing.Size(363, 22);
             this.input_NombreNA.TabIndex = 4;
             // 
             // lbl_NuevoArticulo
@@ -105,6 +112,7 @@ namespace TPWinForm_equipo_2A
             // 
             this.input_DescripcionNA.BackColor = System.Drawing.Color.White;
             this.input_DescripcionNA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.input_DescripcionNA.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.input_DescripcionNA.Location = new System.Drawing.Point(108, 122);
             this.input_DescripcionNA.Multiline = true;
             this.input_DescripcionNA.Name = "input_DescripcionNA";
@@ -115,7 +123,7 @@ namespace TPWinForm_equipo_2A
             // 
             this.lbl_MarcaNA.AutoSize = true;
             this.lbl_MarcaNA.Font = new System.Drawing.Font("Tahoma", 9.75F);
-            this.lbl_MarcaNA.Location = new System.Drawing.Point(57, 213);
+            this.lbl_MarcaNA.Location = new System.Drawing.Point(61, 213);
             this.lbl_MarcaNA.Name = "lbl_MarcaNA";
             this.lbl_MarcaNA.Size = new System.Drawing.Size(47, 16);
             this.lbl_MarcaNA.TabIndex = 10;
@@ -135,7 +143,7 @@ namespace TPWinForm_equipo_2A
             // 
             this.lbl_PrecioNA.AutoSize = true;
             this.lbl_PrecioNA.Font = new System.Drawing.Font("Tahoma", 9.75F);
-            this.lbl_PrecioNA.Location = new System.Drawing.Point(57, 289);
+            this.lbl_PrecioNA.Location = new System.Drawing.Point(60, 505);
             this.lbl_PrecioNA.Name = "lbl_PrecioNA";
             this.lbl_PrecioNA.Size = new System.Drawing.Size(47, 16);
             this.lbl_PrecioNA.TabIndex = 14;
@@ -143,10 +151,10 @@ namespace TPWinForm_equipo_2A
             // 
             // input_PrecioNA
             // 
-            this.input_PrecioNA.BackColor = System.Drawing.SystemColors.Control;
+            this.input_PrecioNA.BackColor = System.Drawing.Color.White;
             this.input_PrecioNA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.input_PrecioNA.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.input_PrecioNA.Location = new System.Drawing.Point(108, 286);
+            this.input_PrecioNA.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.input_PrecioNA.Location = new System.Drawing.Point(108, 504);
             this.input_PrecioNA.Name = "input_PrecioNA";
             this.input_PrecioNA.Size = new System.Drawing.Size(143, 22);
             this.input_PrecioNA.TabIndex = 15;
@@ -173,34 +181,21 @@ namespace TPWinForm_equipo_2A
             // 
             this.input_CodigoNA.BackColor = System.Drawing.Color.White;
             this.input_CodigoNA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.input_CodigoNA.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.input_CodigoNA.Location = new System.Drawing.Point(108, 72);
             this.input_CodigoNA.Name = "input_CodigoNA";
-            this.input_CodigoNA.Size = new System.Drawing.Size(363, 20);
+            this.input_CodigoNA.Size = new System.Drawing.Size(363, 22);
             this.input_CodigoNA.TabIndex = 20;
             // 
             // lbl_CodigoNA
             // 
             this.lbl_CodigoNA.AutoSize = true;
             this.lbl_CodigoNA.Font = new System.Drawing.Font("Tahoma", 9.75F);
-            this.lbl_CodigoNA.Location = new System.Drawing.Point(53, 73);
+            this.lbl_CodigoNA.Location = new System.Drawing.Point(57, 73);
             this.lbl_CodigoNA.Name = "lbl_CodigoNA";
             this.lbl_CodigoNA.Size = new System.Drawing.Size(51, 16);
             this.lbl_CodigoNA.TabIndex = 19;
             this.lbl_CodigoNA.Text = "Codigo:";
-            // 
-            // btn_BuscarNA
-            // 
-            this.btn_BuscarNA.BackColor = System.Drawing.Color.White;
-            this.btn_BuscarNA.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btn_BuscarNA.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_BuscarNA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_BuscarNA.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_BuscarNA.Location = new System.Drawing.Point(108, 244);
-            this.btn_BuscarNA.Name = "btn_BuscarNA";
-            this.btn_BuscarNA.Size = new System.Drawing.Size(64, 20);
-            this.btn_BuscarNA.TabIndex = 21;
-            this.btn_BuscarNA.Text = "Buscar";
-            this.btn_BuscarNA.UseVisualStyleBackColor = false;
             // 
             // cb_MarcaNA
             // 
@@ -220,14 +215,79 @@ namespace TPWinForm_equipo_2A
             this.cb_CategoriaNA.Size = new System.Drawing.Size(143, 21);
             this.cb_CategoriaNA.TabIndex = 23;
             // 
+            // btn_BuscarImagenesLocal
+            // 
+            this.btn_BuscarImagenesLocal.Location = new System.Drawing.Point(314, 246);
+            this.btn_BuscarImagenesLocal.Name = "btn_BuscarImagenesLocal";
+            this.btn_BuscarImagenesLocal.Size = new System.Drawing.Size(53, 23);
+            this.btn_BuscarImagenesLocal.TabIndex = 24;
+            this.btn_BuscarImagenesLocal.Text = "buscar";
+            this.btn_BuscarImagenesLocal.UseVisualStyleBackColor = true;
+            // 
+            // input_UrlImagen
+            // 
+            this.input_UrlImagen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.input_UrlImagen.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.input_UrlImagen.ForeColor = System.Drawing.Color.Black;
+            this.input_UrlImagen.Location = new System.Drawing.Point(108, 246);
+            this.input_UrlImagen.Name = "input_UrlImagen";
+            this.input_UrlImagen.Size = new System.Drawing.Size(200, 22);
+            this.input_UrlImagen.TabIndex = 25;
+            this.input_UrlImagen.WordWrap = false;
+            this.input_UrlImagen.Leave += new System.EventHandler(this.input_UrlImagen_Leave);
+            // 
+            // btn_ConfirmarImagen
+            // 
+            this.btn_ConfirmarImagen.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ConfirmarImagen.Location = new System.Drawing.Point(373, 400);
+            this.btn_ConfirmarImagen.Name = "btn_ConfirmarImagen";
+            this.btn_ConfirmarImagen.Size = new System.Drawing.Size(31, 23);
+            this.btn_ConfirmarImagen.TabIndex = 27;
+            this.btn_ConfirmarImagen.Text = "+";
+            this.btn_ConfirmarImagen.UseVisualStyleBackColor = true;
+            this.btn_ConfirmarImagen.Click += new System.EventHandler(this.btn_ConfirmarImagen_Click);
+            // 
+            // lbl_confirmacionImagen
+            // 
+            this.lbl_confirmacionImagen.Location = new System.Drawing.Point(392, 284);
+            this.lbl_confirmacionImagen.Name = "lbl_confirmacionImagen";
+            this.lbl_confirmacionImagen.Size = new System.Drawing.Size(100, 80);
+            this.lbl_confirmacionImagen.TabIndex = 28;
+            // 
+            // btn_descartarImagen
+            // 
+            this.btn_descartarImagen.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_descartarImagen.Location = new System.Drawing.Point(373, 429);
+            this.btn_descartarImagen.Name = "btn_descartarImagen";
+            this.btn_descartarImagen.Size = new System.Drawing.Size(31, 23);
+            this.btn_descartarImagen.TabIndex = 29;
+            this.btn_descartarImagen.Text = "-";
+            this.btn_descartarImagen.UseVisualStyleBackColor = true;
+            this.btn_descartarImagen.Click += new System.EventHandler(this.btn_descartarImagen_Click);
+            // 
+            // pb_VisorImagen
+            // 
+            this.pb_VisorImagen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pb_VisorImagen.Location = new System.Drawing.Point(108, 275);
+            this.pb_VisorImagen.Name = "pb_VisorImagen";
+            this.pb_VisorImagen.Size = new System.Drawing.Size(259, 212);
+            this.pb_VisorImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_VisorImagen.TabIndex = 30;
+            this.pb_VisorImagen.TabStop = false;
+            // 
             // wf_ADM_AgregarArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(518, 404);
+            this.ClientSize = new System.Drawing.Size(518, 598);
+            this.Controls.Add(this.pb_VisorImagen);
+            this.Controls.Add(this.btn_descartarImagen);
+            this.Controls.Add(this.lbl_confirmacionImagen);
+            this.Controls.Add(this.btn_ConfirmarImagen);
+            this.Controls.Add(this.input_UrlImagen);
+            this.Controls.Add(this.btn_BuscarImagenesLocal);
             this.Controls.Add(this.cb_CategoriaNA);
             this.Controls.Add(this.cb_MarcaNA);
-            this.Controls.Add(this.btn_BuscarNA);
             this.Controls.Add(this.input_CodigoNA);
             this.Controls.Add(this.lbl_CodigoNA);
             this.Controls.Add(this.lbl_ImagenNA);
@@ -243,11 +303,11 @@ namespace TPWinForm_equipo_2A
             this.Controls.Add(this.btnAgregarNA);
             this.Controls.Add(this.lbl_NombreNA);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(534, 443);
             this.Name = "wf_ADM_AgregarArticulo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Gestion Catalogo [Nuevo Articulo]";
             this.Load += new System.EventHandler(this.wf_ADM_AgregarArticulo_Load_1);
+            ((System.ComponentModel.ISupportInitialize)(this.pb_VisorImagen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -269,8 +329,13 @@ namespace TPWinForm_equipo_2A
         private Label lbl_ImagenNA;
         private TextBox input_CodigoNA;
         private Label lbl_CodigoNA;
-        private Button btn_BuscarNA;
         private ComboBox cb_MarcaNA;
         private ComboBox cb_CategoriaNA;
+        private Button btn_BuscarImagenesLocal;
+        private TextBox input_UrlImagen;
+        private Button btn_ConfirmarImagen;
+        private Label lbl_confirmacionImagen;
+        private Button btn_descartarImagen;
+        private PictureBox pb_VisorImagen;
     }
 }

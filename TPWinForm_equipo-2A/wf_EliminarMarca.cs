@@ -47,6 +47,12 @@ namespace TPWinForm_equipo_2A
                         break;
                     }
 
+                } 
+
+                if(ListaMarcas.Count == 0)
+                {
+                    lbl_estadoEliminacionMarca.ForeColor = Color.Red;
+                    lbl_estadoEliminacionMarca.Text = "El ID ingresado es inexistente";
                 }
             }
             catch (Exception)
