@@ -62,10 +62,10 @@ namespace TPWinForm_equipo_2A
             // lbl_Titulo
             // 
             this.lbl_Titulo.AutoSize = true;
-            this.lbl_Titulo.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Titulo.Font = new System.Drawing.Font("Tahoma", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Titulo.Location = new System.Drawing.Point(21, 16);
             this.lbl_Titulo.Name = "lbl_Titulo";
-            this.lbl_Titulo.Size = new System.Drawing.Size(149, 29);
+            this.lbl_Titulo.Size = new System.Drawing.Size(173, 29);
             this.lbl_Titulo.TabIndex = 1;
             this.lbl_Titulo.Text = "Bienvenido/a";
             // 
@@ -74,7 +74,7 @@ namespace TPWinForm_equipo_2A
             this.btn_Busqueda.BackColor = System.Drawing.Color.DarkGray;
             this.btn_Busqueda.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btn_Busqueda.FlatAppearance.BorderSize = 2;
-            this.btn_Busqueda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Busqueda.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Busqueda.Location = new System.Drawing.Point(21, 93);
             this.btn_Busqueda.Name = "btn_Busqueda";
             this.btn_Busqueda.Padding = new System.Windows.Forms.Padding(0, 90, 0, 0);
@@ -87,6 +87,7 @@ namespace TPWinForm_equipo_2A
             // btn_AgregarArticulo
             // 
             this.btn_AgregarArticulo.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btn_AgregarArticulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_AgregarArticulo.Location = new System.Drawing.Point(5, 34);
             this.btn_AgregarArticulo.Name = "btn_AgregarArticulo";
             this.btn_AgregarArticulo.Padding = new System.Windows.Forms.Padding(0, 70, 0, 0);
@@ -115,6 +116,7 @@ namespace TPWinForm_equipo_2A
             // btn_EliminarArticulo
             // 
             this.btn_EliminarArticulo.BackColor = System.Drawing.Color.Tomato;
+            this.btn_EliminarArticulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_EliminarArticulo.Location = new System.Drawing.Point(127, 34);
             this.btn_EliminarArticulo.Name = "btn_EliminarArticulo";
             this.btn_EliminarArticulo.Padding = new System.Windows.Forms.Padding(0, 70, 0, 0);
@@ -127,6 +129,7 @@ namespace TPWinForm_equipo_2A
             // btn_ModificarArticulo
             // 
             this.btn_ModificarArticulo.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_ModificarArticulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ModificarArticulo.Location = new System.Drawing.Point(249, 34);
             this.btn_ModificarArticulo.Name = "btn_ModificarArticulo";
             this.btn_ModificarArticulo.Padding = new System.Windows.Forms.Padding(0, 70, 0, 0);
@@ -139,6 +142,7 @@ namespace TPWinForm_equipo_2A
             // btn_MarcasCategorias
             // 
             this.btn_MarcasCategorias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btn_MarcasCategorias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_MarcasCategorias.Location = new System.Drawing.Point(540, 301);
             this.btn_MarcasCategorias.Name = "btn_MarcasCategorias";
             this.btn_MarcasCategorias.Padding = new System.Windows.Forms.Padding(0, 70, 0, 0);
@@ -167,6 +171,7 @@ namespace TPWinForm_equipo_2A
             this.gb_AdmArticulos.Controls.Add(this.btn_ModificarArticulo);
             this.gb_AdmArticulos.Controls.Add(this.btn_EliminarArticulo);
             this.gb_AdmArticulos.Controls.Add(this.btn_AgregarArticulo);
+            this.gb_AdmArticulos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.gb_AdmArticulos.Location = new System.Drawing.Point(368, 88);
             this.gb_AdmArticulos.Name = "gb_AdmArticulos";
             this.gb_AdmArticulos.Size = new System.Drawing.Size(373, 155);
@@ -209,6 +214,7 @@ namespace TPWinForm_equipo_2A
             // btn_DetallesArticulos
             // 
             this.btn_DetallesArticulos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btn_DetallesArticulos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_DetallesArticulos.Location = new System.Drawing.Point(21, 301);
             this.btn_DetallesArticulos.Name = "btn_DetallesArticulos";
             this.btn_DetallesArticulos.Padding = new System.Windows.Forms.Padding(0, 70, 0, 0);
@@ -255,7 +261,7 @@ namespace TPWinForm_equipo_2A
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(756, 481);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox5);
