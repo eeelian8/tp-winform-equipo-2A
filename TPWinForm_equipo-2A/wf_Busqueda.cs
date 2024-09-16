@@ -23,6 +23,10 @@ namespace TPWinForm_equipo_2A
 
         }
 
+
+
+
+
         private void wf_Busqueda_Load(object sender, EventArgs e)
         {
             cargar();

@@ -60,7 +60,7 @@ namespace TPWinForm_equipo_2A
                 MessageBox.Show("Agregado correctamente");
                 Close();
             }
-            catch (FormatException ex)
+            catch (FormatException)
             {
                 MessageBox.Show("El precio debe ser un número válido.");
             }
@@ -95,7 +95,7 @@ namespace TPWinForm_equipo_2A
             {
                 pb_VisorImagen.Load(imagen);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 pb_VisorImagen.Load("https://cdn.pixabay.com/photo/2017/11/10/05/24/upload-2935442_1280.png");
             }

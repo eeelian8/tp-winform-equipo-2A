@@ -68,7 +68,13 @@ namespace TPWinForm_equipo_2A
                 }
             }
 
-            pb_ImagenesDA.Load(imagenesXarticulo[contadorImg].Url);
+            if(imagenesXarticulo.Count == 0)
+            {
+                pb_ImagenesDA.Load("https://cdn.pixabay.com/photo/2017/11/10/05/24/upload-2935442_1280.png");
+            } else
+            {
+                pb_ImagenesDA.Load(imagenesXarticulo[contadorImg].Url);
+            }
         }
 
         private void wf_Detalles_Load_1(object sender, EventArgs e)
