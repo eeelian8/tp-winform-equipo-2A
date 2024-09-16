@@ -81,9 +81,11 @@
             this.Controls.Add(this.btn_eliminarCategoria);
             this.Controls.Add(this.lbl_EliminarCategoria);
             this.Controls.Add(this.input_idEliminarCategoria);
+            this.MaximumSize = new System.Drawing.Size(318, 247);
+            this.MinimumSize = new System.Drawing.Size(318, 247);
             this.Name = "wf_EliminarCategoria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "wf_EliminarCategoria";
+            this.Text = "Eliminar categoria";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +19,10 @@ namespace TPWinForm_equipo_2A
             InitializeComponent();
         }
 
+        private int contadorImg = 0;
+
+        private List<Imagen> imagenesXarticulo = new List<Imagen>();
+
         private void wf_Detalles_Load(object sender, EventArgs e)
         {
 
@@ -32,6 +35,9 @@ namespace TPWinForm_equipo_2A
 
             List<Articulo> ListaArticulos = new List<Articulo>();
             ListaArticulos = artCBD.Listar();
+
+            ImagenCBD imagenCBD = new ImagenCBD();
+
             foreach (Articulo art in ListaArticulos)
             {
                 if (art.Codigo == codArt)
@@ -40,9 +46,26 @@ namespace TPWinForm_equipo_2A
                     lbl_DescripcionDA.Text = art.Descripcion;
                     lbl_MarcasDA.Text = art.Marca.Descripcion;
                     lbl_CategoriaDA.Text = art.Categoria.Descripcion;
-                    lbl_PrecioDA.Text = art.Precio.ToString("C0", CultureInfo.CurrentCulture);
+                    lbl_PrecioDA.Text = art.Precio.ToString();
+
+                    foreach (Imagen img in imagenCBD.Listar())
+                    {
+                        foreach (Articulo reg in ListaArticulos)
+                        {
+                            if (reg.Codigo == art.Codigo)
+                            {
+                                if (img.IdArticulo == art.Id)
+                                {
+                                    imagenesXarticulo.Add(img);
+                                }
+                            }
+                        }
+                    }
+
                 }
             }
+
+            pb_ImagenesDA.Load(imagenesXarticulo[contadorImg].Url);
         }
 
         private void wf_Detalles_Load_1(object sender, EventArgs e)
@@ -58,6 +81,34 @@ namespace TPWinForm_equipo_2A
         private void lbl_PrecioDA_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                contadorImg++;
+                pb_ImagenesDA.Load(imagenesXarticulo[contadorImg].Url);
+            }
+            catch (Exception)
+            {
+
+                pb_ImagenesDA.Load("https://cdn.pixabay.com/photo/2017/11/10/05/24/upload-2935442_1280.png");
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                contadorImg--;
+                pb_ImagenesDA.Load(imagenesXarticulo[contadorImg].Url);
+            }
+            catch (Exception)
+            {
+
+                pb_ImagenesDA.Load("https://cdn.pixabay.com/photo/2017/11/10/05/24/upload-2935442_1280.png");
+            }
         }
     }
 }

@@ -36,30 +36,37 @@ namespace TPWinForm_equipo_2A
             ListaArticulos = artCBD.Listar();
             foreach (Articulo art in ListaArticulos)
             {
-                if (art.Codigo == codArt)
+                try
                 {
-                    lbl_NombreDetallesMA.Text = art.Nombre;
-                    lbl_DescripcionDetallesMA.Text = art.Descripcion;
-                    cb_MarcasDetallesMA.Text = art.Marca.Descripcion;
-                    cb_CategoriaDetallesMA.Text = art.Categoria.Descripcion;
-                    lbl_PrecioDetallesMA.Text = art.Precio.ToString("C0", CultureInfo.CurrentCulture);
-
-                    foreach (Imagen img in imagenCBD.Listar())
+                    if (art.Codigo == codArt)
                     {
-                        if(img.IdArticulo == art.Id)
-                        {
-                            try
-                            {
-                                pb_ImagenesDetallesMA.Load(img.Url);
-                            }
-                            catch (Exception)
-                            {
-                                pb_ImagenesDetallesMA.Load("https://cdn.pixabay.com/photo/2017/11/10/05/24/upload-2935442_1280.png");
-                            }
-                            break;
-                        }
-                    }
+                        lbl_NombreDetallesMA.Text = art.Nombre;
+                        lbl_DescripcionDetallesMA.Text = art.Descripcion;
+                        cb_MarcasDetallesMA.Text = art.Marca.Descripcion;
+                        cb_CategoriaDetallesMA.Text = art.Categoria.Descripcion;
+                        lbl_PrecioDetallesMA.Text = art.Precio.ToString("C0", CultureInfo.CurrentCulture);
 
+                        foreach (Imagen img in imagenCBD.Listar())
+                        {
+                            if (img.IdArticulo == art.Id)
+                            {
+                                try
+                                {
+                                    pb_ImagenesDetallesMA.Load(img.Url);
+                                }
+                                catch (Exception)
+                                {
+                                    pb_ImagenesDetallesMA.Load("https://cdn.pixabay.com/photo/2017/11/10/05/24/upload-2935442_1280.png");
+                                }
+                                break;
+                            }
+                        }
+
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
                 }
             }
         }

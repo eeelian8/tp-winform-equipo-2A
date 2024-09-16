@@ -107,6 +107,7 @@ namespace TPWinForm_equipo_2A
             this.dgvArticulos.Location = new System.Drawing.Point(11, 119);
             this.dgvArticulos.MultiSelect = false;
             this.dgvArticulos.Name = "dgvArticulos";
+            this.dgvArticulos.ReadOnly = true;
             this.dgvArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvArticulos.Size = new System.Drawing.Size(980, 512);
             this.dgvArticulos.TabIndex = 13;
@@ -318,7 +319,7 @@ namespace TPWinForm_equipo_2A
             this.MinimumSize = new System.Drawing.Size(1019, 682);
             this.Name = "wf_Busqueda";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "wf_Busqueda";
+            this.Text = "Sistema de busqueda";
             this.Load += new System.EventHandler(this.wf_Busqueda_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).EndInit();
             this.ResumeLayout(false);

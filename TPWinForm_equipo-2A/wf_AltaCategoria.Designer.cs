@@ -75,9 +75,10 @@
             this.Controls.Add(this.input_nombreAltaCategoria);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(408, 231);
+            this.MinimumSize = new System.Drawing.Size(408, 231);
             this.Name = "wf_AltaCategoria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "wf_AltaCategoria";
+            this.Text = "Alta de categoria";
             this.ResumeLayout(false);
             this.PerformLayout();
 

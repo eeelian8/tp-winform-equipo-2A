@@ -264,9 +264,10 @@ namespace TPWinForm_equipo_2A
             this.Controls.Add(this.lbl_NroArticuloMA);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(581, 470);
+            this.MinimumSize = new System.Drawing.Size(581, 470);
             this.Name = "wf_ADM_ModificarArticulo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "wf_ModificarArticulo";
+            this.Text = "Gestion Catalogo [Modificar Articulo]";
             this.Load += new System.EventHandler(this.wf_ADM_ModificarArticulo_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.pb_ImagenesDetallesMA)).EndInit();
             this.ResumeLayout(false);

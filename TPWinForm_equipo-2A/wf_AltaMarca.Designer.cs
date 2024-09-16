@@ -74,9 +74,10 @@
             this.Controls.Add(this.input_nombreAltaMarca);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(408, 231);
+            this.MinimumSize = new System.Drawing.Size(408, 231);
             this.Name = "wf_AltaMarca";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "wf_AltaMarca";
+            this.Text = "Alta de marca";
             this.Load += new System.EventHandler(this.wf_AltaMarca_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -154,9 +154,11 @@ namespace TPWinForm_equipo_2A
             this.Controls.Add(this.gb_CategoriasMC);
             this.Controls.Add(this.gb_MarcasMC);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(474, 429);
+            this.MinimumSize = new System.Drawing.Size(474, 429);
             this.Name = "wf_MarcasCategorias";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "wf_MarcasCategorias";
+            this.Text = "Control de marcas y categorias";
             this.Load += new System.EventHandler(this.wf_MarcasCategorias_Load_1);
             this.gb_MarcasMC.ResumeLayout(false);
             this.gb_CategoriasMC.ResumeLayout(false);

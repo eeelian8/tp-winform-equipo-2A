@@ -96,9 +96,10 @@ namespace TPWinForm_equipo_2A
             this.Controls.Add(this.lbl_NroArticuloEA);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(337, 309);
+            this.MinimumSize = new System.Drawing.Size(337, 309);
             this.Name = "wf_ADM_EliminarArticulo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "wf_EliminarArticulo";
+            this.Text = "Gestion Catalogo [ Eliminar Articulo]";
             this.ResumeLayout(false);
             this.PerformLayout();
 

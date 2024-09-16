@@ -81,9 +81,11 @@
             this.Controls.Add(this.btn_eliminarMarca);
             this.Controls.Add(this.lbl_EliminarMarca);
             this.Controls.Add(this.input_idEliminarMarca);
+            this.MaximumSize = new System.Drawing.Size(318, 247);
+            this.MinimumSize = new System.Drawing.Size(318, 247);
             this.Name = "wf_EliminarMarca";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "wf_EliminarMarca";
+            this.Text = "Eliminar marca";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -315,6 +315,8 @@ namespace TPWinForm_equipo_2A
             this.Controls.Add(this.btnAgregarNA);
             this.Controls.Add(this.lbl_NombreNA);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(534, 637);
+            this.MinimumSize = new System.Drawing.Size(534, 637);
             this.Name = "wf_ADM_AgregarArticulo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Gestion Catalogo [Nuevo Articulo]";
