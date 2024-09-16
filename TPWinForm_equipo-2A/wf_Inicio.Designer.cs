@@ -99,6 +99,7 @@ namespace TPWinForm_equipo_2A
             // 
             // statusStrip1
             // 
+            this.statusStrip1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lbl_Creditos});
             this.statusStrip1.Location = new System.Drawing.Point(0, 459);

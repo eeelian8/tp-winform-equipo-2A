@@ -30,6 +30,9 @@ namespace TPWinForm_equipo_2A
 
         private void btn_DetallesBuscar_Click(object sender, EventArgs e)
         {
+            imagenesXarticulo.Clear();
+            contadorImg = 0;
+
             string codArt = input_CodigoArticuloDetalles.Text;
             ArticuloCBD artCBD = new ArticuloCBD();
 
