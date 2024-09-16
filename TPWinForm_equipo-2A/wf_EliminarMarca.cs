@@ -38,13 +38,11 @@ namespace TPWinForm_equipo_2A
                         marCBD.Eliminar(marca.Id);
                         lbl_estadoEliminacionMarca.ForeColor = Color.Green;
                         lbl_estadoEliminacionMarca.Text = "Eliminado correctamente";
-                        break;
                     }
                     else
                     {
                         lbl_estadoEliminacionMarca.ForeColor = Color.Red;
                         lbl_estadoEliminacionMarca.Text = "El ID ingresado es inexistente";
-                        break;
                     }
 
                 } 

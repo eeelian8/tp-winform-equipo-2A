@@ -216,6 +216,7 @@ namespace TPWinForm_equipo_2A
             this.pictureBox1.Size = new System.Drawing.Size(108, 78);
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.btn_Busqueda_Click);
             // 
             // pictureBox2
             // 
@@ -225,6 +226,7 @@ namespace TPWinForm_equipo_2A
             this.pictureBox2.Size = new System.Drawing.Size(76, 75);
             this.pictureBox2.TabIndex = 14;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.btn_AgregarArticulo_Click);
             // 
             // pictureBox3
             // 
@@ -234,15 +236,17 @@ namespace TPWinForm_equipo_2A
             this.pictureBox3.Size = new System.Drawing.Size(76, 75);
             this.pictureBox3.TabIndex = 15;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.btn_EliminarArticulo_Click);
             // 
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(271, 41);
+            this.pictureBox4.Location = new System.Drawing.Point(271, 40);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(76, 77);
             this.pictureBox4.TabIndex = 16;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.btn_ModificarArticulo_Click);
             // 
             // pictureBox5
             // 
@@ -252,7 +256,7 @@ namespace TPWinForm_equipo_2A
             this.pictureBox5.Size = new System.Drawing.Size(108, 75);
             this.pictureBox5.TabIndex = 17;
             this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
+            this.pictureBox5.Click += new System.EventHandler(this.btn_MarcasCategorias_Click);
             // 
             // pictureBox6
             // 
@@ -262,6 +266,7 @@ namespace TPWinForm_equipo_2A
             this.pictureBox6.Size = new System.Drawing.Size(108, 75);
             this.pictureBox6.TabIndex = 18;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.btn_DetallesArticulos_Click);
             // 
             // wf_Inicio
             // 

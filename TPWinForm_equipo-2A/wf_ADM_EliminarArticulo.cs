@@ -42,13 +42,11 @@ namespace TPWinForm_equipo_2A
                         artCBD.Eliminar(articulo.Codigo);
                         lbl_EstadoEliminacion.ForeColor = Color.Green;
                         lbl_EstadoEliminacion.Text = "Eliminado correctamente";
-                        break;
                     }
                     else
                     {
                         lbl_EstadoEliminacion.ForeColor = Color.Red;
                         lbl_EstadoEliminacion.Text = "El codigo ingresado es inexistente";
-                        break;
                     }
 
                 }

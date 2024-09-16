@@ -38,13 +38,11 @@ namespace TPWinForm_equipo_2A
                         catCBD.Eliminar(categoria.Id);
                         lbl_estadoEliminacionCategoria.ForeColor = Color.Green;
                         lbl_estadoEliminacionCategoria.Text = "Eliminado correctamente";
-                        break;
                     }
                     else
                     {
                         lbl_estadoEliminacionCategoria.ForeColor = Color.Red;
                         lbl_estadoEliminacionCategoria.Text = "El ID ingresado es inexistente";
-                        break;
                     }
 
                 }
