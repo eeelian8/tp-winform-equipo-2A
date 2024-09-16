@@ -96,7 +96,10 @@ namespace TPWinForm_equipo_2A
         {
             try
             {
-                contadorImg++;
+                if (contadorImg < imagenesXarticulo.Count-1)
+                {
+                    contadorImg++;
+                }
                 pb_ImagenesDA.Load(imagenesXarticulo[contadorImg].Url);
             }
             catch (Exception)
@@ -110,7 +113,10 @@ namespace TPWinForm_equipo_2A
         {
             try
             {
-                contadorImg--;
+                if(contadorImg > 0)
+                {
+                    contadorImg--;
+                }
                 pb_ImagenesDA.Load(imagenesXarticulo[contadorImg].Url);
             }
             catch (Exception)
