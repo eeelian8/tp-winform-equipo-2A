@@ -24,7 +24,7 @@ namespace Servicios
             try
             {
 
-                datos.setearConsulta("select A.Id, A.Codigo, A.Nombre, A.Descripcion, A.IdMarca, A.IdCategoria, A.Precio, MIN(I.id) as IdImagen from ARTICULOS A left join MARCAS M on A.IdMarca = M.Id left join CATEGORIAS C on A.IdCategoria = C.Id left join IMAGENES I on A.Id = I.IdArticulo group by A.Id, A.Codigo, A.Nombre, A.Descripcion, A.IdMarca, A.IdCategoria, A.Precio");
+                datos.setearConsulta("select A.Id, A.Codigo, A.Nombre, A.Descripcion, A.IdMarca, A.IdCategoria, A.Precio from ARTICULOS A left join MARCAS M on A.IdMarca = M.Id left join CATEGORIAS C on A.IdCategoria = C.Id");
                 datos.ejecutarLectura();
 
                 int IDCategoria = 0;
@@ -83,7 +83,38 @@ namespace Servicios
                 datos.cerrarConexion();
             }
         }
+        public void ValidacionAgregar(Articulo art)
+        {
+            AccesoDatos datos = new AccesoDatos();
 
+            try
+            {
+                datos.setearConsulta("select count(*) from ARTICULOS where Codigo = @Codigo");
+                datos.setearParametro("@Codigo", art.Codigo);
+                datos.ejecutarLectura();
+
+                int count = 0;
+                if (datos.Lector.Read())
+                {
+                    count = (int)datos.Lector[0];
+                }
+
+                if (count > 0)
+                {
+                    // Lanzar una excepción en lugar de mostrar MessageBox
+                    throw new Exception("Ya existe un artículo con este código.");
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
         public void Agregar(Articulo art)
         {
             AccesoDatos datos = new AccesoDatos();
