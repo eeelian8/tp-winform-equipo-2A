@@ -147,6 +147,9 @@
     <EmbeddedResource Include="wf_EliminarMarca.resx">
       <DependentUpon>wf_EliminarMarca.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="wf_Inicio.resx">
+      <DependentUpon>wf_Inicio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="wf_MarcasCategorias.resx">
       <DependentUpon>wf_MarcasCategorias.cs</DependentUpon>
     </EmbeddedResource>

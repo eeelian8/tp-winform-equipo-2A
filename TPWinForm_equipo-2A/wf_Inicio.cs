@@ -53,5 +53,10 @@ namespace TPWinForm_equipo_2A
             wf_MarcasCategorias FormMarcasCategorias = new wf_MarcasCategorias();
             FormMarcasCategorias.ShowDialog();
         }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
