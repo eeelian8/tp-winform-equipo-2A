@@ -30,6 +30,12 @@ namespace TPWinForm_equipo_2A
             {
                 int idCategoria = int.Parse(input_idEliminarCategoria.Text);
 
+                if (ListaCategorias.Count == 0)
+                {
+                    lbl_estadoEliminacionCategoria.ForeColor = Color.Red;
+                    lbl_estadoEliminacionCategoria.Text = "El ID ingresado es inexistente";
+                }
+
                 foreach (Categoria categoria in ListaCategorias)
                 {
 
@@ -45,12 +51,6 @@ namespace TPWinForm_equipo_2A
                         lbl_estadoEliminacionCategoria.Text = "El ID ingresado es inexistente";
                     }
 
-                }
-
-                if (ListaCategorias.Count == 0)
-                {
-                    lbl_estadoEliminacionCategoria.ForeColor = Color.Red;
-                    lbl_estadoEliminacionCategoria.Text = "El ID ingresado es inexistente";
                 }
             }
             catch (Exception )

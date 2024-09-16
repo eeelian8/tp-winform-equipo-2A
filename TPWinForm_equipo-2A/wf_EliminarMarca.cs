@@ -31,6 +31,12 @@ namespace TPWinForm_equipo_2A
             {
                 int idMarca = int.Parse(input_idEliminarMarca.Text);
 
+                if (ListaMarcas.Count == 0)
+                {
+                    lbl_estadoEliminacionMarca.ForeColor = Color.Red;
+                    lbl_estadoEliminacionMarca.Text = "El ID ingresado es inexistente";
+                }
+
                 foreach (Marca marca in ListaMarcas)
                 {
                     if (marca.Id == idMarca)
@@ -46,12 +52,6 @@ namespace TPWinForm_equipo_2A
                     }
 
                 } 
-
-                if(ListaMarcas.Count == 0)
-                {
-                    lbl_estadoEliminacionMarca.ForeColor = Color.Red;
-                    lbl_estadoEliminacionMarca.Text = "El ID ingresado es inexistente";
-                }
             }
             catch (Exception)
             {
