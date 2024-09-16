@@ -31,20 +31,11 @@ namespace TPWinForm_equipo_2A
         {
             Articulo art = new Articulo();
             ArticuloCBD artCBD = new ArticuloCBD();
+            Imagen imagen = new Imagen();
+            ImagenCBD imagenCBD = new ImagenCBD();
 
             try
             {
-                // Validar que todos los campos obligatorios están completos
-                if (string.IsNullOrEmpty(input_NombreNA.Text) ||
-                    string.IsNullOrEmpty(input_DescripcionNA.Text) ||
-                    string.IsNullOrEmpty(input_PrecioNA.Text) ||
-                    cb_MarcaNA.SelectedItem == null ||
-                    cb_CategoriaNA.SelectedItem == null ||
-                    string.IsNullOrEmpty(input_CodigoNA.Text))
-                {
-                    MessageBox.Show("Por favor, complete todos los campos obligatorios.");
-                    return;
-                }
 
                 art.Nombre = input_NombreNA.Text;
                 art.Descripcion = input_DescripcionNA.Text;
@@ -52,21 +43,32 @@ namespace TPWinForm_equipo_2A
                 art.Marca = (Marca)cb_MarcaNA.SelectedItem;
                 art.Categoria = (Categoria)cb_CategoriaNA.SelectedItem;
                 art.Codigo = input_CodigoNA.Text;
-
-                // Validar y agregar el artículo
-                artCBD.ValidacionAgregar(art);
                 artCBD.Agregar(art);
+
+                foreach (Articulo reg in artCBD.Listar())
+                {
+                    if (reg.Codigo == input_CodigoNA.Text)
+                    {
+                        foreach (string x in listaAuxiliarURL)
+                        {
+                            imagen.IdArticulo = reg.Id;
+                            imagen.Url = x;
+                            imagenCBD.Agregar(imagen);
+                        }
+                    }
+                }
 
                 MessageBox.Show("Agregado correctamente");
                 Close();
             }
-            catch (FormatException)
-            {
-                MessageBox.Show("El precio debe ser un número válido.");
-            }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al agregar el artículo: " + ex.Message);
+
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                listaAuxiliarURL.Clear();
             }
         }
 
@@ -95,7 +97,7 @@ namespace TPWinForm_equipo_2A
             {
                 pb_VisorImagen.Load(imagen);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 pb_VisorImagen.Load("https://cdn.pixabay.com/photo/2017/11/10/05/24/upload-2935442_1280.png");
             }
