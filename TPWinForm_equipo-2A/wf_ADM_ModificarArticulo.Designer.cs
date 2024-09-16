@@ -62,7 +62,7 @@ namespace TPWinForm_equipo_2A
             this.input_CodigoArticuloMA.Location = new System.Drawing.Point(216, 62);
             this.input_CodigoArticuloMA.Name = "input_CodigoArticuloMA";
             this.input_CodigoArticuloMA.Size = new System.Drawing.Size(104, 22);
-            this.input_CodigoArticuloMA.TabIndex = 5;
+            this.input_CodigoArticuloMA.TabIndex = 0;
             // 
             // lbl_NroArticuloMA
             // 
@@ -152,7 +152,7 @@ namespace TPWinForm_equipo_2A
             this.btn_BuscarMA.Location = new System.Drawing.Point(327, 62);
             this.btn_BuscarMA.Name = "btn_BuscarMA";
             this.btn_BuscarMA.Size = new System.Drawing.Size(26, 23);
-            this.btn_BuscarMA.TabIndex = 48;
+            this.btn_BuscarMA.TabIndex = 1;
             this.btn_BuscarMA.Text = ">";
             this.btn_BuscarMA.UseVisualStyleBackColor = false;
             this.btn_BuscarMA.Click += new System.EventHandler(this.btn_BuscarMA_Click);
@@ -164,7 +164,7 @@ namespace TPWinForm_equipo_2A
             this.btn_ConfirmarModificar.Location = new System.Drawing.Point(115, 364);
             this.btn_ConfirmarModificar.Name = "btn_ConfirmarModificar";
             this.btn_ConfirmarModificar.Size = new System.Drawing.Size(111, 32);
-            this.btn_ConfirmarModificar.TabIndex = 49;
+            this.btn_ConfirmarModificar.TabIndex = 8;
             this.btn_ConfirmarModificar.Text = "Guardar";
             this.btn_ConfirmarModificar.UseVisualStyleBackColor = false;
             this.btn_ConfirmarModificar.Click += new System.EventHandler(this.btn_ConfirmarModificar_Click);
@@ -176,7 +176,7 @@ namespace TPWinForm_equipo_2A
             this.btn_EliminarIMG.Location = new System.Drawing.Point(351, 382);
             this.btn_EliminarIMG.Name = "btn_EliminarIMG";
             this.btn_EliminarIMG.Size = new System.Drawing.Size(50, 23);
-            this.btn_EliminarIMG.TabIndex = 55;
+            this.btn_EliminarIMG.TabIndex = 10;
             this.btn_EliminarIMG.Text = "Eliminar";
             this.btn_EliminarIMG.UseVisualStyleBackColor = false;
             this.btn_EliminarIMG.Click += new System.EventHandler(this.btn_EliminarIMG_Click);
@@ -188,7 +188,7 @@ namespace TPWinForm_equipo_2A
             this.btn_AgregarIMG.Location = new System.Drawing.Point(422, 382);
             this.btn_AgregarIMG.Name = "btn_AgregarIMG";
             this.btn_AgregarIMG.Size = new System.Drawing.Size(120, 23);
-            this.btn_AgregarIMG.TabIndex = 56;
+            this.btn_AgregarIMG.TabIndex = 9;
             this.btn_AgregarIMG.Text = "Agregar nueva imagen";
             this.btn_AgregarIMG.UseVisualStyleBackColor = false;
             this.btn_AgregarIMG.Click += new System.EventHandler(this.btn_AgregarIMG_Click);
@@ -198,14 +198,14 @@ namespace TPWinForm_equipo_2A
             this.lbl_NombreDetallesMA.Location = new System.Drawing.Point(99, 134);
             this.lbl_NombreDetallesMA.Name = "lbl_NombreDetallesMA";
             this.lbl_NombreDetallesMA.Size = new System.Drawing.Size(177, 20);
-            this.lbl_NombreDetallesMA.TabIndex = 57;
+            this.lbl_NombreDetallesMA.TabIndex = 2;
             // 
             // lbl_DescripcionDetallesMA
             // 
             this.lbl_DescripcionDetallesMA.Location = new System.Drawing.Point(100, 173);
             this.lbl_DescripcionDetallesMA.Name = "lbl_DescripcionDetallesMA";
             this.lbl_DescripcionDetallesMA.Size = new System.Drawing.Size(177, 20);
-            this.lbl_DescripcionDetallesMA.TabIndex = 58;
+            this.lbl_DescripcionDetallesMA.TabIndex = 3;
             // 
             // cb_CategoriaDetallesMA
             // 
@@ -213,7 +213,7 @@ namespace TPWinForm_equipo_2A
             this.cb_CategoriaDetallesMA.Location = new System.Drawing.Point(99, 269);
             this.cb_CategoriaDetallesMA.Name = "cb_CategoriaDetallesMA";
             this.cb_CategoriaDetallesMA.Size = new System.Drawing.Size(176, 21);
-            this.cb_CategoriaDetallesMA.TabIndex = 61;
+            this.cb_CategoriaDetallesMA.TabIndex = 5;
             // 
             // cb_MarcasDetallesMA
             // 
@@ -221,21 +221,21 @@ namespace TPWinForm_equipo_2A
             this.cb_MarcasDetallesMA.Location = new System.Drawing.Point(99, 226);
             this.cb_MarcasDetallesMA.Name = "cb_MarcasDetallesMA";
             this.cb_MarcasDetallesMA.Size = new System.Drawing.Size(176, 21);
-            this.cb_MarcasDetallesMA.TabIndex = 62;
+            this.cb_MarcasDetallesMA.TabIndex = 4;
             // 
             // lbl_PrecioDetallesMA
             // 
             this.lbl_PrecioDetallesMA.Location = new System.Drawing.Point(98, 310);
             this.lbl_PrecioDetallesMA.Name = "lbl_PrecioDetallesMA";
             this.lbl_PrecioDetallesMA.Size = new System.Drawing.Size(178, 20);
-            this.lbl_PrecioDetallesMA.TabIndex = 63;
+            this.lbl_PrecioDetallesMA.TabIndex = 6;
             // 
             // tb_nuevaUrlImagen
             // 
             this.tb_nuevaUrlImagen.Location = new System.Drawing.Point(301, 347);
             this.tb_nuevaUrlImagen.Name = "tb_nuevaUrlImagen";
             this.tb_nuevaUrlImagen.Size = new System.Drawing.Size(241, 20);
-            this.tb_nuevaUrlImagen.TabIndex = 64;
+            this.tb_nuevaUrlImagen.TabIndex = 7;
             this.tb_nuevaUrlImagen.Leave += new System.EventHandler(this.tb_nuevaUrlImagen_Leave);
             // 
             // wf_ADM_ModificarArticulo

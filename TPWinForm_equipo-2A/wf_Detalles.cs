@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -39,10 +40,9 @@ namespace TPWinForm_equipo_2A
                     lbl_DescripcionDA.Text = art.Descripcion;
                     lbl_MarcasDA.Text = art.Marca.Descripcion;
                     lbl_CategoriaDA.Text = art.Categoria.Descripcion;
-                    lbl_PrecioDA.Text = art.Precio.ToString();
+                    lbl_PrecioDA.Text = art.Precio.ToString("C0", CultureInfo.CurrentCulture);
                 }
             }
-
         }
 
         private void wf_Detalles_Load_1(object sender, EventArgs e)

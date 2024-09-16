@@ -53,6 +53,7 @@ namespace TPWinForm_equipo_2A
             this.lbl_confirmacionImagen = new System.Windows.Forms.Label();
             this.btn_descartarImagen = new System.Windows.Forms.Button();
             this.pb_VisorImagen = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pb_VisorImagen)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,7 +74,7 @@ namespace TPWinForm_equipo_2A
             this.btnAgregarNA.Location = new System.Drawing.Point(366, 536);
             this.btnAgregarNA.Name = "btnAgregarNA";
             this.btnAgregarNA.Size = new System.Drawing.Size(105, 40);
-            this.btnAgregarNA.TabIndex = 2;
+            this.btnAgregarNA.TabIndex = 8;
             this.btnAgregarNA.Text = "Agregar";
             this.btnAgregarNA.UseVisualStyleBackColor = false;
             this.btnAgregarNA.Click += new System.EventHandler(this.btnAgregarNA_Click);
@@ -86,7 +87,7 @@ namespace TPWinForm_equipo_2A
             this.input_NombreNA.Location = new System.Drawing.Point(108, 97);
             this.input_NombreNA.Name = "input_NombreNA";
             this.input_NombreNA.Size = new System.Drawing.Size(363, 22);
-            this.input_NombreNA.TabIndex = 4;
+            this.input_NombreNA.TabIndex = 1;
             // 
             // lbl_NuevoArticulo
             // 
@@ -117,7 +118,7 @@ namespace TPWinForm_equipo_2A
             this.input_DescripcionNA.Multiline = true;
             this.input_DescripcionNA.Name = "input_DescripcionNA";
             this.input_DescripcionNA.Size = new System.Drawing.Size(363, 75);
-            this.input_DescripcionNA.TabIndex = 9;
+            this.input_DescripcionNA.TabIndex = 2;
             // 
             // lbl_MarcaNA
             // 
@@ -143,7 +144,7 @@ namespace TPWinForm_equipo_2A
             // 
             this.lbl_PrecioNA.AutoSize = true;
             this.lbl_PrecioNA.Font = new System.Drawing.Font("Tahoma", 9.75F);
-            this.lbl_PrecioNA.Location = new System.Drawing.Point(60, 505);
+            this.lbl_PrecioNA.Location = new System.Drawing.Point(50, 505);
             this.lbl_PrecioNA.Name = "lbl_PrecioNA";
             this.lbl_PrecioNA.Size = new System.Drawing.Size(47, 16);
             this.lbl_PrecioNA.TabIndex = 14;
@@ -157,7 +158,7 @@ namespace TPWinForm_equipo_2A
             this.input_PrecioNA.Location = new System.Drawing.Point(108, 504);
             this.input_PrecioNA.Name = "input_PrecioNA";
             this.input_PrecioNA.Size = new System.Drawing.Size(143, 22);
-            this.input_PrecioNA.TabIndex = 15;
+            this.input_PrecioNA.TabIndex = 7;
             // 
             // label7
             // 
@@ -185,7 +186,7 @@ namespace TPWinForm_equipo_2A
             this.input_CodigoNA.Location = new System.Drawing.Point(108, 72);
             this.input_CodigoNA.Name = "input_CodigoNA";
             this.input_CodigoNA.Size = new System.Drawing.Size(363, 22);
-            this.input_CodigoNA.TabIndex = 20;
+            this.input_CodigoNA.TabIndex = 0;
             // 
             // lbl_CodigoNA
             // 
@@ -204,7 +205,7 @@ namespace TPWinForm_equipo_2A
             this.cb_MarcaNA.Location = new System.Drawing.Point(108, 212);
             this.cb_MarcaNA.Name = "cb_MarcaNA";
             this.cb_MarcaNA.Size = new System.Drawing.Size(143, 21);
-            this.cb_MarcaNA.TabIndex = 22;
+            this.cb_MarcaNA.TabIndex = 3;
             // 
             // cb_CategoriaNA
             // 
@@ -213,14 +214,14 @@ namespace TPWinForm_equipo_2A
             this.cb_CategoriaNA.Location = new System.Drawing.Point(328, 212);
             this.cb_CategoriaNA.Name = "cb_CategoriaNA";
             this.cb_CategoriaNA.Size = new System.Drawing.Size(143, 21);
-            this.cb_CategoriaNA.TabIndex = 23;
+            this.cb_CategoriaNA.TabIndex = 4;
             // 
             // btn_BuscarImagenesLocal
             // 
             this.btn_BuscarImagenesLocal.Location = new System.Drawing.Point(314, 246);
             this.btn_BuscarImagenesLocal.Name = "btn_BuscarImagenesLocal";
             this.btn_BuscarImagenesLocal.Size = new System.Drawing.Size(53, 23);
-            this.btn_BuscarImagenesLocal.TabIndex = 24;
+            this.btn_BuscarImagenesLocal.TabIndex = 6;
             this.btn_BuscarImagenesLocal.Text = "buscar";
             this.btn_BuscarImagenesLocal.UseVisualStyleBackColor = true;
             // 
@@ -232,7 +233,7 @@ namespace TPWinForm_equipo_2A
             this.input_UrlImagen.Location = new System.Drawing.Point(108, 246);
             this.input_UrlImagen.Name = "input_UrlImagen";
             this.input_UrlImagen.Size = new System.Drawing.Size(200, 22);
-            this.input_UrlImagen.TabIndex = 25;
+            this.input_UrlImagen.TabIndex = 5;
             this.input_UrlImagen.WordWrap = false;
             this.input_UrlImagen.Leave += new System.EventHandler(this.input_UrlImagen_Leave);
             // 
@@ -275,11 +276,22 @@ namespace TPWinForm_equipo_2A
             this.pb_VisorImagen.TabIndex = 30;
             this.pb_VisorImagen.TabStop = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.label1.Location = new System.Drawing.Point(92, 504);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(16, 18);
+            this.label1.TabIndex = 31;
+            this.label1.Text = "$";
+            // 
             // wf_ADM_AgregarArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(518, 598);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.pb_VisorImagen);
             this.Controls.Add(this.btn_descartarImagen);
             this.Controls.Add(this.lbl_confirmacionImagen);
@@ -337,5 +349,6 @@ namespace TPWinForm_equipo_2A
         private Label lbl_confirmacionImagen;
         private Button btn_descartarImagen;
         private PictureBox pb_VisorImagen;
+        private Label label1;
     }
 }

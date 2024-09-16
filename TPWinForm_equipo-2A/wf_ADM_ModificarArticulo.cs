@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -41,7 +42,7 @@ namespace TPWinForm_equipo_2A
                     lbl_DescripcionDetallesMA.Text = art.Descripcion;
                     cb_MarcasDetallesMA.Text = art.Marca.Descripcion;
                     cb_CategoriaDetallesMA.Text = art.Categoria.Descripcion;
-                    lbl_PrecioDetallesMA.Text = art.Precio.ToString();
+                    lbl_PrecioDetallesMA.Text = art.Precio.ToString("C0", CultureInfo.CurrentCulture);
 
                     foreach (Imagen img in imagenCBD.Listar())
                     {

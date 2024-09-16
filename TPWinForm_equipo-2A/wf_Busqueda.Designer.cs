@@ -100,6 +100,7 @@ namespace TPWinForm_equipo_2A
             // 
             // dgvArticulos
             // 
+            this.dgvArticulos.AllowUserToResizeColumns = false;
             this.dgvArticulos.BackgroundColor = System.Drawing.Color.White;
             this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvArticulos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
@@ -138,7 +139,7 @@ namespace TPWinForm_equipo_2A
             this.db_BusquedaMarca.Location = new System.Drawing.Point(502, 34);
             this.db_BusquedaMarca.Name = "db_BusquedaMarca";
             this.db_BusquedaMarca.Size = new System.Drawing.Size(89, 21);
-            this.db_BusquedaMarca.TabIndex = 20;
+            this.db_BusquedaMarca.TabIndex = 2;
             // 
             // lbl_RangoPrecioBusqueda
             // 
@@ -159,7 +160,7 @@ namespace TPWinForm_equipo_2A
             this.db_BusquedaCategoria.Location = new System.Drawing.Point(394, 35);
             this.db_BusquedaCategoria.Name = "db_BusquedaCategoria";
             this.db_BusquedaCategoria.Size = new System.Drawing.Size(89, 21);
-            this.db_BusquedaCategoria.TabIndex = 22;
+            this.db_BusquedaCategoria.TabIndex = 1;
             this.db_BusquedaCategoria.SelectedIndexChanged += new System.EventHandler(this.db_BusquedaCategoria_SelectedIndexChanged);
             // 
             // label2
@@ -177,14 +178,14 @@ namespace TPWinForm_equipo_2A
             this.TbPrecioMIN.Location = new System.Drawing.Point(607, 36);
             this.TbPrecioMIN.Name = "TbPrecioMIN";
             this.TbPrecioMIN.Size = new System.Drawing.Size(73, 20);
-            this.TbPrecioMIN.TabIndex = 24;
+            this.TbPrecioMIN.TabIndex = 3;
             // 
             // TbPrecioMAX
             // 
             this.TbPrecioMAX.Location = new System.Drawing.Point(694, 36);
             this.TbPrecioMAX.Name = "TbPrecioMAX";
             this.TbPrecioMAX.Size = new System.Drawing.Size(73, 20);
-            this.TbPrecioMAX.TabIndex = 25;
+            this.TbPrecioMAX.TabIndex = 4;
             // 
             // btnAplicarFiltros
             // 
@@ -193,7 +194,7 @@ namespace TPWinForm_equipo_2A
             this.btnAplicarFiltros.Location = new System.Drawing.Point(829, 22);
             this.btnAplicarFiltros.Name = "btnAplicarFiltros";
             this.btnAplicarFiltros.Size = new System.Drawing.Size(82, 25);
-            this.btnAplicarFiltros.TabIndex = 26;
+            this.btnAplicarFiltros.TabIndex = 5;
             this.btnAplicarFiltros.Text = "APLICAR";
             this.btnAplicarFiltros.UseVisualStyleBackColor = false;
             this.btnAplicarFiltros.Click += new System.EventHandler(this.button1_Click);
@@ -270,7 +271,7 @@ namespace TPWinForm_equipo_2A
             this.TbNombre.Location = new System.Drawing.Point(275, 36);
             this.TbNombre.Name = "TbNombre";
             this.TbNombre.Size = new System.Drawing.Size(102, 20);
-            this.TbNombre.TabIndex = 34;
+            this.TbNombre.TabIndex = 0;
             this.TbNombre.TextChanged += new System.EventHandler(this.TbNombre_TextChanged);
             // 
             // btnLimpiarFiltros
@@ -279,7 +280,7 @@ namespace TPWinForm_equipo_2A
             this.btnLimpiarFiltros.Location = new System.Drawing.Point(819, 54);
             this.btnLimpiarFiltros.Name = "btnLimpiarFiltros";
             this.btnLimpiarFiltros.Size = new System.Drawing.Size(104, 19);
-            this.btnLimpiarFiltros.TabIndex = 35;
+            this.btnLimpiarFiltros.TabIndex = 6;
             this.btnLimpiarFiltros.Text = "LIMPIAR FILTROS";
             this.btnLimpiarFiltros.UseVisualStyleBackColor = true;
             this.btnLimpiarFiltros.Click += new System.EventHandler(this.btnLimpiarFiltros_Click);

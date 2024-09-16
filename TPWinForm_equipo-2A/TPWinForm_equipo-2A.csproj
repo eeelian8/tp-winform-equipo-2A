@@ -141,6 +141,9 @@
     <EmbeddedResource Include="wf_Busqueda.resx">
       <DependentUpon>wf_Busqueda.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="wf_Detalles.resx">
+      <DependentUpon>wf_Detalles.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="wf_EliminarCategoria.resx">
       <DependentUpon>wf_EliminarCategoria.cs</DependentUpon>
     </EmbeddedResource>

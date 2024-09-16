@@ -57,7 +57,7 @@ namespace TPWinForm_equipo_2A
             this.input_CodigoArticuloDetalles.Location = new System.Drawing.Point(109, 75);
             this.input_CodigoArticuloDetalles.Name = "input_CodigoArticuloDetalles";
             this.input_CodigoArticuloDetalles.Size = new System.Drawing.Size(107, 20);
-            this.input_CodigoArticuloDetalles.TabIndex = 7;
+            this.input_CodigoArticuloDetalles.TabIndex = 0;
             // 
             // lbl_NroArticuloDetalles
             // 
@@ -144,7 +144,7 @@ namespace TPWinForm_equipo_2A
             this.lbl_PrecioDA.Location = new System.Drawing.Point(134, 326);
             this.lbl_PrecioDA.Name = "lbl_PrecioDA";
             this.lbl_PrecioDA.Size = new System.Drawing.Size(188, 22);
-            this.lbl_PrecioDA.TabIndex = 23;
+            this.lbl_PrecioDA.TabIndex = 6;
             this.lbl_PrecioDA.Click += new System.EventHandler(this.lbl_PrecioDA_Click);
             // 
             // lbl_NombreDA
@@ -154,7 +154,7 @@ namespace TPWinForm_equipo_2A
             this.lbl_NombreDA.Location = new System.Drawing.Point(134, 116);
             this.lbl_NombreDA.Name = "lbl_NombreDA";
             this.lbl_NombreDA.Size = new System.Drawing.Size(188, 22);
-            this.lbl_NombreDA.TabIndex = 24;
+            this.lbl_NombreDA.TabIndex = 2;
             // 
             // lbl_DescripcionDA
             // 
@@ -163,7 +163,7 @@ namespace TPWinForm_equipo_2A
             this.lbl_DescripcionDA.Location = new System.Drawing.Point(134, 144);
             this.lbl_DescripcionDA.Name = "lbl_DescripcionDA";
             this.lbl_DescripcionDA.Size = new System.Drawing.Size(188, 21);
-            this.lbl_DescripcionDA.TabIndex = 25;
+            this.lbl_DescripcionDA.TabIndex = 3;
             this.lbl_DescripcionDA.Click += new System.EventHandler(this.lbl_DescripcionDA_Click);
             // 
             // lbl_MarcasDA
@@ -173,7 +173,7 @@ namespace TPWinForm_equipo_2A
             this.lbl_MarcasDA.Location = new System.Drawing.Point(134, 171);
             this.lbl_MarcasDA.Name = "lbl_MarcasDA";
             this.lbl_MarcasDA.Size = new System.Drawing.Size(188, 24);
-            this.lbl_MarcasDA.TabIndex = 26;
+            this.lbl_MarcasDA.TabIndex = 4;
             // 
             // lbl_CategoriaDA
             // 
@@ -182,14 +182,14 @@ namespace TPWinForm_equipo_2A
             this.lbl_CategoriaDA.Location = new System.Drawing.Point(134, 199);
             this.lbl_CategoriaDA.Name = "lbl_CategoriaDA";
             this.lbl_CategoriaDA.Size = new System.Drawing.Size(188, 22);
-            this.lbl_CategoriaDA.TabIndex = 27;
+            this.lbl_CategoriaDA.TabIndex = 5;
             // 
             // btn_DetallesBuscar
             // 
             this.btn_DetallesBuscar.Location = new System.Drawing.Point(242, 75);
             this.btn_DetallesBuscar.Name = "btn_DetallesBuscar";
             this.btn_DetallesBuscar.Size = new System.Drawing.Size(75, 23);
-            this.btn_DetallesBuscar.TabIndex = 28;
+            this.btn_DetallesBuscar.TabIndex = 1;
             this.btn_DetallesBuscar.Text = "Buscar";
             this.btn_DetallesBuscar.UseVisualStyleBackColor = true;
             this.btn_DetallesBuscar.Click += new System.EventHandler(this.btn_DetallesBuscar_Click);
